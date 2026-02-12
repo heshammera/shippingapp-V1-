@@ -1,0 +1,104 @@
+﻿
+  Dropping all tables  1,965ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table  333ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table  720ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table  750ms DONE
+  2019_08_19_000000_create_failed_jobs_table  723ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table  1,019ms DONE
+  2025_04_26_180400_create_shipping_companies_table  399ms DONE
+  2025_04_26_180405_create_delivery_agents_table  961ms DONE
+  2025_04_26_180406_create_collections_table  1,040ms DONE
+  2025_04_26_180406_create_expenses_table  800ms DONE
+  2025_04_26_180406_create_settings_table  826ms DONE
+  2025_04_26_180406_create_shipment_statuses_table  559ms DONE
+  2025_04_26_180406_create_shipments_table  1,599ms DONE
+  2025_04_27_025811_create_products_table  567ms DONE
+  2025_04_27_040907_add_total_color_size_to_shipments_table  611ms DONE
+  2025_04_28_085733_add_missing_fields_to_shipments_table  2,499ms DONE
+  2025_04_28_111830_add_phone_address_is_active_to_users_table  549ms DONE
+  2025_04_28_112704_add_role_to_users_table  498ms DONE
+  2025_04_29_150130_add_shipping_company_to_shipments_table  399ms DONE
+  2025_04_29_161449_modify_shipping_company_id_nullable  2,781ms DONE
+  2025_04_30_015920_add_row_color_to_shipment_statuses_table  362ms DONE
+  2025_05_01_025742_add_role_id_to_users_table  740ms DONE
+  2025_05_01_050759_create_permission_tables  5,202ms DONE
+  2025_05_01_070809_add_expires_at_to_users_table  490ms DONE
+  2025_05_06_054629_create_activity_log_table  1,241ms DONE
+  2025_05_06_054630_add_event_column_to_activity_log_table  472ms DONE
+  2025_05_06_054631_add_batch_uuid_column_to_activity_log_table  576ms DONE
+  2025_05_14_180104_create_shipment_product_table  1,004ms DONE
+  2025_08_03_153042_create_role_user_table  1,120ms DONE
+  2025_08_06_100959_create_tier_prices_table  802ms DONE
+  2025_08_09_182033_add_shipping_company_id_to_users_table  421ms DONE
+  2025_08_10_120846_add_alternate_phone_to_shipments_table  399ms DONE
+  2025_08_23_134723_create_inventories_table  1,023ms DONE
+  2025_08_23_143446_create_stock_movements_table  728ms DONE
+  2025_08_23_144431_create_notifications_table  1,043ms DONE
+  2025_08_23_145639_alter_inventories_quantity_nullable  3,514ms DONE
+  2025_08_23_153602_add_is_deducted_to_shipments_table  535ms DONE
+  2025_08_24_130000_inventory_v2_bootstrap  9,113ms DONE
+  2025_08_26_000000_add_semantic_flags_to_shipment_statuses  1,541ms DONE
+  2025_08_26_114225_alter_settings_key_length  3,384ms DONE
+  2025_08_26_195859_add_is_unlimited_to_inventories  746ms DONE
+  2025_08_27_130447_add_deleted_at_to_inventories  719ms DONE
+  2025_08_27_142743_add_delivered_and_returned_to_shipments_table  637ms DONE
+  2025_08_31_000000_add_inventory_flags_to_shipments  756ms DONE
+  2026_01_27_000000_add_description_to_roles_table  481ms DONE
+  2026_01_27_000001_add_description_to_permissions_table  511ms DONE
+  2026_01_27_000002_add_last_login_at_to_users_table  489ms DONE
+  2026_01_27_000003_add_missing_columns_to_users_table  791ms DONE
+  2026_01_27_000004_add_cost_price_to_products_table  731ms DONE
+  2026_01_27_000005_add_missing_columns_to_shipments_table  1,197ms DONE
+  2026_01_27_040125_add_delivery_agent_id_to_collections_table  559ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  475 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  660 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+  Database\Seeders\UsersTableSeeder  534 ms DONE  
+
+  Database\Seeders\ModelHasRolesTableSeeder  RUNNING  
+  Database\Seeders\ModelHasRolesTableSeeder  474 ms DONE  
+
+  Database\Seeders\RoleHasPermissionsTableSeeder  RUNNING  
+  Database\Seeders\RoleHasPermissionsTableSeeder  498 ms DONE  
+
+  Database\Seeders\ShippingCompaniesTableSeeder  RUNNING  
+  Database\Seeders\ShippingCompaniesTableSeeder  468 ms DONE  
+
+  Database\Seeders\DeliveryAgentsTableSeeder  RUNNING  
+  Database\Seeders\DeliveryAgentsTableSeeder  545 ms DONE  
+
+  Database\Seeders\ShipmentStatusesTableSeeder  RUNNING  
+  Database\Seeders\ShipmentStatusesTableSeeder  566 ms DONE  
+
+  Database\Seeders\ProductsTableSeeder  RUNNING  
+  Database\Seeders\ProductsTableSeeder  485 ms DONE  
+
+  Database\Seeders\ShipmentsTableSeeder  RUNNING  
+  Database\Seeders\ShipmentsTableSeeder  2,256 ms DONE  
+
+  Database\Seeders\ShipmentProductTableSeeder  RUNNING  
+  Database\Seeders\ShipmentProductTableSeeder  4,232 ms DONE  
+
+  Database\Seeders\CollectionsTableSeeder  RUNNING  
+  Database\Seeders\CollectionsTableSeeder  629 ms DONE  
+
+  Database\Seeders\ExpensesTableSeeder  RUNNING  
+  Database\Seeders\ExpensesTableSeeder  259 ms DONE  
+
+  Database\Seeders\AppSettingsSeeder  RUNNING  
+  Database\Seeders\AppSettingsSeeder  2,550 ms DONE  
+

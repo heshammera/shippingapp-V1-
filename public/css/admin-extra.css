@@ -1,0 +1,75 @@
+/* Custom Row Colors for Shipments Table - High Visibility */
+.tr-success {
+    background-color: rgba(34, 197, 94, 0.25) !important;
+}
+
+.tr-danger {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+}
+
+.tr-warning {
+    background-color: rgba(249, 115, 22, 0.25) !important;
+}
+
+.tr-info {
+    background-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+.tr-primary {
+    background-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+.tr-gray {
+    background-color: rgba(107, 114, 128, 0.25) !important;
+}
+
+/* Dark Mode - Even brighter for contrast */
+.dark .tr-success {
+    background-color: rgba(34, 197, 94, 0.35) !important;
+}
+
+.dark .tr-danger {
+    background-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+.dark .tr-warning {
+    background-color: rgba(249, 115, 22, 0.35) !important;
+}
+
+.dark .tr-info {
+    background-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+.dark .tr-primary {
+    background-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+.dark .tr-gray {
+    background-color: rgba(107, 114, 128, 0.35) !important;
+}
+
+/* Ensure text is readable */
+.fi-ta-row:hover {
+    opacity: 1;
+    transform: scale(1.001);
+    transition: all 0.2s;
+}
+
+/* Force Borders since ->bordered() is missing in this version */
+.fi-ta-cell {
+    border-bottom: 1px solid #e5e7eb !important;
+    border-right: 1px solid #e5e7eb !important;
+}
+
+.dark .fi-ta-cell {
+    border-bottom: 1px solid #374151 !important;
+    border-right: 1px solid #374151 !important;
+}
+
+.fi-ta-header-cell {
+    border-bottom: 2px solid #e5e7eb !important;
+}
+
+.dark .fi-ta-header-cell {
+    border-bottom: 2px solid #374151 !important;
+}

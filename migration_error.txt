@@ -1,0 +1,128 @@
+﻿
+   INFO  Running migrations.  
+
+  2026_01_27_000003_add_missing_columns_to_users_table  502ms FAIL
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role" of relation "users" already exists (Connection: pgsql, SQL: alter table "users" add column "role" varchar(255) null, add column "role_id" varchar(255) null, add column "phone" varchar(255) null, add column "address" text null, add column "is_active" boolean not null default '1', add column "expires_at" timestamp(0) without time zone null, add column "theme_color" varchar(255) null)
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role" of relation "users" already exists")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Schema\Blueprint.php:110
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php:602
+      Illuminate\Database\Schema\Blueprint::build()
+
+  8   vendor\laravel\framework\src\Illuminate\Database\Schema\Builder.php:444
+      Illuminate\Database\Schema\Builder::build()
+
+  9   vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+      Illuminate\Database\Schema\Builder::table()
+
+  10  database\migrations\2026_01_27_000003_add_missing_columns_to_users_table.php:14
+      Illuminate\Support\Facades\Facade::__callStatic()
+
+  11  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:501
+      Illuminate\Database\Migrations\Migration@anonymous\D:\www\shippingapp\database\migrations\2026_01_27_000003_add_missing_columns_to_users_table.php:7$127::up()
+
+  12  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:418
+      Illuminate\Database\Migrations\Migrator::runMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Database\Concerns\ManagesTransactions.php:30
+      Illuminate\Database\Migrations\Migrator::Illuminate\Database\Migrations\{closure}()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:426
+      Illuminate\Database\Connection::transaction()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:224
+      Illuminate\Database\Migrations\Migrator::runMigration()
+
+  16  vendor\laravel\framework\src\Illuminate\Console\View\Components\Task.php:37
+      Illuminate\Database\Migrations\Migrator::Illuminate\Database\Migrations\{closure}()
+
+  17  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:783
+      Illuminate\Console\View\Components\Task::render()
+
+  18  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:224
+      Illuminate\Database\Migrations\Migrator::write()
+
+  19  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:189
+      Illuminate\Database\Migrations\Migrator::runUp()
+
+  20  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:132
+      Illuminate\Database\Migrations\Migrator::runPending()
+
+  21  vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php:90
+      Illuminate\Database\Migrations\Migrator::run()
+
+  22  vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php:641
+      Illuminate\Database\Console\Migrations\MigrateCommand::Illuminate\Database\Console\Migrations\{closure}()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php:83
+      Illuminate\Database\Migrations\Migrator::usingConnection()
+
+  24  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Migrations\MigrateCommand::handle()
+
+  25  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  26  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  27  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  29  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  30  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  31  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  32  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  33  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  34  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  35  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  36  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

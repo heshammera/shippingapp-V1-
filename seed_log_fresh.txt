@@ -1,0 +1,128 @@
+﻿
+  Dropping all tables  1,835ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table  292ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table  957ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table  661ms DONE
+  2019_08_19_000000_create_failed_jobs_table  696ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table  1,029ms DONE
+  2025_04_26_180400_create_shipping_companies_table  409ms DONE
+  2025_04_26_180405_create_delivery_agents_table  1,047ms DONE
+  2025_04_26_180406_create_collections_table  1,052ms DONE
+  2025_04_26_180406_create_expenses_table  798ms DONE
+  2025_04_26_180406_create_settings_table  751ms DONE
+  2025_04_26_180406_create_shipment_statuses_table  471ms DONE
+  2025_04_26_180406_create_shipments_table  1,925ms DONE
+  2025_04_27_025811_create_products_table  481ms DONE
+  2025_04_27_040907_add_total_color_size_to_shipments_table  595ms DONE
+  2025_04_28_085733_add_missing_fields_to_shipments_table  2,397ms DONE
+  2025_04_28_111830_add_phone_address_is_active_to_users_table  549ms DONE
+  2025_04_28_112704_add_role_to_users_table  399ms DONE
+  2025_04_29_150130_add_shipping_company_to_shipments_table  467ms DONE
+  2025_04_29_161449_modify_shipping_company_id_nullable  6,573ms DONE
+  2025_04_30_015920_add_row_color_to_shipment_statuses_table  515ms DONE
+  2025_05_01_025742_add_role_id_to_users_table  567ms DONE
+  2025_05_01_050759_create_permission_tables  5,340ms DONE
+  2025_05_01_070809_add_expires_at_to_users_table  492ms DONE
+  2025_05_06_054629_create_activity_log_table  1,369ms DONE
+  2025_05_06_054630_add_event_column_to_activity_log_table  410ms DONE
+  2025_05_06_054631_add_batch_uuid_column_to_activity_log_table  479ms DONE
+  2025_05_14_180104_create_shipment_product_table  1,290ms DONE
+  2025_08_03_153042_create_role_user_table  1,350ms DONE
+  2025_08_06_100959_create_tier_prices_table  720ms DONE
+  2025_08_09_182033_add_shipping_company_id_to_users_table  569ms DONE
+  2025_08_10_120846_add_alternate_phone_to_shipments_table  631ms DONE
+  2025_08_23_134723_create_inventories_table  1,050ms DONE
+  2025_08_23_143446_create_stock_movements_table  892ms DONE
+  2025_08_23_144431_create_notifications_table  930ms DONE
+  2025_08_23_145639_alter_inventories_quantity_nullable  3,557ms DONE
+  2025_08_23_153602_add_is_deducted_to_shipments_table  411ms DONE
+  2025_08_24_130000_inventory_v2_bootstrap  8,927ms DONE
+  2025_08_26_000000_add_semantic_flags_to_shipment_statuses  1,519ms DONE
+  2025_08_26_114225_alter_settings_key_length  3,325ms DONE
+  2025_08_26_195859_add_is_unlimited_to_inventories  810ms DONE
+  2025_08_27_130447_add_deleted_at_to_inventories  803ms DONE
+  2025_08_27_142743_add_delivered_and_returned_to_shipments_table  962ms DONE
+  2025_08_31_000000_add_inventory_flags_to_shipments  713ms DONE
+  2026_01_27_000000_add_description_to_roles_table  457ms DONE
+  2026_01_27_000001_add_description_to_permissions_table  488ms DONE
+  2026_01_27_000002_add_last_login_at_to_users_table  539ms DONE
+  2026_01_27_000003_add_missing_columns_to_users_table  709ms DONE
+  2026_01_27_000004_add_cost_price_to_products_table  661ms DONE
+  2026_01_27_000005_add_missing_columns_to_shipments_table  1,609ms DONE
+  2026_01_27_040125_add_delivery_agent_id_to_collections_table  411ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  592 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  625 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+  Database\Seeders\UsersTableSeeder  494 ms DONE  
+
+  Database\Seeders\ModelHasRolesTableSeeder  RUNNING  
+  Database\Seeders\ModelHasRolesTableSeeder  462 ms DONE  
+
+  Database\Seeders\RoleHasPermissionsTableSeeder  RUNNING  
+  Database\Seeders\RoleHasPermissionsTableSeeder  486 ms DONE  
+
+  Database\Seeders\ShippingCompaniesTableSeeder  RUNNING  
+  Database\Seeders\ShippingCompaniesTableSeeder  559 ms DONE  
+
+  Database\Seeders\DeliveryAgentsTableSeeder  RUNNING  
+  Database\Seeders\DeliveryAgentsTableSeeder  627 ms DONE  
+
+  Database\Seeders\ShipmentStatusesTableSeeder  RUNNING  
+  Database\Seeders\ShipmentStatusesTableSeeder  636 ms DONE  
+
+  Database\Seeders\ProductsTableSeeder  RUNNING  
+  Database\Seeders\ProductsTableSeeder  555 ms DONE  
+
+  Database\Seeders\ShipmentsTableSeeder  RUNNING  
+  Database\Seeders\ShipmentsTableSeeder  2,614 ms DONE  
+
+  Database\Seeders\ShipmentProductTableSeeder  RUNNING  
+  Database\Seeders\ShipmentProductTableSeeder  4,693 ms DONE  
+
+  Database\Seeders\CollectionsTableSeeder  RUNNING  
+  Database\Seeders\CollectionsTableSeeder  570 ms DONE  
+
+  Database\Seeders\ExpensesTableSeeder  RUNNING  
+  Database\Seeders\ExpensesTableSeeder  304 ms DONE  
+
+  Database\Seeders\ProductPricesTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "product_prices" does not exist
+LINE 1: delete from "product_prices"
+                    ^ (Connection: pgsql, SQL: delete from "product_prices")
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:612
+      PDOException::("SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "product_prices" does not exist
+LINE 1: delete from "product_prices"
+                    ^")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:612
+      PDOStatement::execute()
+

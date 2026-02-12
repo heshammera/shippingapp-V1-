@@ -1,0 +1,21 @@
+{
+    "name": "Shipping App - نظام الشحن الذكي",
+    "short_name": "ShippingApp",
+    "start_url": "/admin",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0284c7",
+    "description": "نظام إدارة الشحن والمخزون المتطور",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

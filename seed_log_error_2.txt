@@ -1,0 +1,145 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  1,647 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+
+   Illuminate\Database\UniqueConstraintViolationException 
+
+  SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "permissions_name_guard_name_unique"
+DETAIL:  Key (name, guard_name)=(view_collections, web) already exists. (Connection: pgsql, SQL: insert into "permissions" ("created_at", "description", "guard_name", "id", "name", "updated_at") values (2025-05-01 07:21:14, عرض الشحنات, web, 1, shipments.view, 2025-05-01 07:57:39), (2025-05-01 07:30:57, إضافة شحنة, web, 2, shipments.create, 2025-05-01 07:57:39), (2025-05-01 07:30:57, تعديل شحنة, web, 3, shipments.edit, 2025-05-01 07:57:39), (2025-05-01 07:30:57, , web, 4, shipments.delete, 2025-05-01 07:57:39), (2025-05-01 07:30:57, , web, 5, invoices.view, 2025-05-01 07:57:39), (2025-05-01 07:30:57, إدارة المستخدمين, web, 6, users.manage, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تصدير الشحنات, web, 7, shipments.export, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تتبع الشحنات, web, 8, shipments.track, 2025-05-01 07:57:39), (2025-05-01 07:38:09, عرض المستخدمين, web, 9, users.view, 2025-05-01 07:57:39), (2025-05-01 07:38:09, إضافة مستخدم, web, 10, users.create, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تعديل مستخدم, web, 11, users.edit, 2025-05-01 07:57:39), (2025-05-01 07:38:09, حذف مستخدم, web, 12, users.delete, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تعيين أدوار, web, 13, users.assign_roles, 2025-05-01 07:57:39), (2025-05-01 07:38:09, طباعة الفواتير, web, 14, invoices.print, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تصدير الفواتير, web, 15, invoices.export, 2025-05-01 07:57:39), (2025-05-01 07:38:09, إنشاء فاتورة يدويًا, web, 16, invoices.create_manual, 2025-05-01 07:57:39), (2025-05-01 07:38:09, تعديل الإعدادات العامة, web, 17, settings.general, 2025-05-01 07:57:39), (2025-05-01 07:38:09, إدارة التنبيهات, web, 18, settings.notifications, 2025-05-01 07:57:39), (2025-05-01 07:38:09, إدارة الأدوار والصلاحيات, web, 19, settings.roles_permissions, 2025-05-01 07:57:39), (2025-05-01 07:38:09, عرض شركات الشحن, web, 20, shipping_companies.view, 2025-05-01 07:57:39), (2025-05-01 07:38:09, إدارة شركات الشحن, web, 21, shipping_companies.manage, 2025-05-01 07:57:39), (2025-05-05 23:03:48, عرض التحصيلات, web, 22, view_collections, 2025-05-05 23:03:48), (2025-05-05 23:03:48, عرض التقارير, web, 23, view_reports, 2025-05-05 23:03:48), (2025-05-05 23:06:17, عرض التحصيلات, web, 45, view_collections, 2025-05-05 23:06:17), (2025-05-05 23:06:17, عرض التقارير, web, 46, view_reports, 2025-05-05 23:06:17))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:824
+    820▕         // message to include the bindings with SQL, which will make this exception a
+    821▕         // lot more helpful to the developer instead of just the database's errors.
+    822▕         catch (Exception $e) {
+    823▕             if ($this->isUniqueConstraintError($e)) {
+  ➜ 824▕                 throw new UniqueConstraintViolationException(
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "permissions_name_guard_name_unique"
+DETAIL:  Key (name, guard_name)=(view_collections, web) already exists.")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Connection.php:540
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3498
+      Illuminate\Database\Connection::insert()
+
+  8   database\seeders\PermissionsTableSeeder.php:21
+      Illuminate\Database\Query\Builder::insert()
+
+  9   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\PermissionsTableSeeder::run()
+
+  10  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  11  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  12  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  16  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:61
+      Illuminate\Database\Seeder::__invoke()
+
+  17  database\seeders\DatabaseSeeder.php:21
+      Illuminate\Database\Seeder::call()
+
+  18  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  19  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  20  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  21  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  22  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  24  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  25  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:70
+      Illuminate\Database\Seeder::__invoke()
+
+  26  vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php:155
+      Illuminate\Database\Console\Seeds\SeedCommand::Illuminate\Database\Console\Seeds\{closure}()
+
+  27  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:69
+      Illuminate\Database\Eloquent\Model::unguarded()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Seeds\SeedCommand::handle()
+
+  29  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  30  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  31  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  32  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  33  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  34  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  35  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  36  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  37  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  38  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  39  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  40  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

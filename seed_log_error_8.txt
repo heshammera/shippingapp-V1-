@@ -1,0 +1,163 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  1,565 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  613 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+  Database\Seeders\UsersTableSeeder  612 ms DONE  
+
+  Database\Seeders\ModelHasRolesTableSeeder  RUNNING  
+  Database\Seeders\ModelHasRolesTableSeeder  626 ms DONE  
+
+  Database\Seeders\RoleHasPermissionsTableSeeder  RUNNING  
+  Database\Seeders\RoleHasPermissionsTableSeeder  1,009 ms DONE  
+
+  Database\Seeders\ShippingCompaniesTableSeeder  RUNNING  
+  Database\Seeders\ShippingCompaniesTableSeeder  1,127 ms DONE  
+
+  Database\Seeders\DeliveryAgentsTableSeeder  RUNNING  
+  Database\Seeders\DeliveryAgentsTableSeeder  607 ms DONE  
+
+  Database\Seeders\ShipmentStatusesTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "is_default" of relation "shipment_statuses" violates not-null constraint
+DETAIL:  Failing row contains (37, غير محدد, table-light, null, 2025-05-06 04:53:26, 2025-05-10 15:51:36, null, f, f, 0). (Connection: pgsql, SQL: insert into "shipment_statuses" ("color", "created_at", "id", "is_default", "name", "row_color", "sort_order", "updated_at") values (table-success, 2025-04-26 22:09:05, 1, 0, تم التوصيل, , 0, 2025-05-10 15:51:51), (table-danger, 2025-04-26 22:09:05, 2, 0, مرتجع, , 0, 2025-05-10 15:51:45), (table-primary, 2025-04-26 22:09:05, 3, 0, عهدة أو تدوير, , 0, 2025-05-10 15:43:47), (table-light, 2025-05-06 04:53:26, 37, ?, غير محدد, ?, 0, 2025-05-10 15:51:36), (table-purple, 2025-05-08 22:46:24, 39, ?, مجاش, ?, 0, 2025-05-26 20:12:26), (table-dark, 2025-05-10 14:08:45, 40, ?, ملغي, ?, 0, 2025-05-21 15:47:53), (table-success, 2025-05-26 19:37:24, 42, ?, تم التوصيل (كاش), ?, 0, 2025-07-20 20:43:18), (table-orange, 2025-05-26 19:50:39, 45, ?, تبديل بدون دفع, ?, 0, 2025-05-26 20:10:26), (table-info, 2025-06-13 18:43:05, 46, ?, تم التأكيد, ?, 0, 2025-06-13 18:43:05), (table-orange, 2025-06-13 18:43:25, 47, ?, لا يرد, ?, 0, 2025-06-13 18:43:25))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "is_default" of relation "shipment_statuses" violates not-null constraint
+DETAIL:  Failing row contains (37, غير محدد, table-light, null, 2025-05-06 04:53:26, 2025-05-10 15:51:36, null, f, f, 0).")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Connection.php:540
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3498
+      Illuminate\Database\Connection::insert()
+
+  8   database\seeders\ShipmentStatusesTableSeeder.php:21
+      Illuminate\Database\Query\Builder::insert()
+
+  9   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\ShipmentStatusesTableSeeder::run()
+
+  10  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  11  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  12  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  16  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:61
+      Illuminate\Database\Seeder::__invoke()
+
+  17  database\seeders\DatabaseSeeder.php:21
+      Illuminate\Database\Seeder::call()
+
+  18  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  19  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  20  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  21  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  22  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  24  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  25  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:70
+      Illuminate\Database\Seeder::__invoke()
+
+  26  vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php:155
+      Illuminate\Database\Console\Seeds\SeedCommand::Illuminate\Database\Console\Seeds\{closure}()
+
+  27  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:69
+      Illuminate\Database\Eloquent\Model::unguarded()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Seeds\SeedCommand::handle()
+
+  29  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  30  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  31  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  32  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  33  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  34  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  35  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  36  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  37  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  38  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  39  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  40  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

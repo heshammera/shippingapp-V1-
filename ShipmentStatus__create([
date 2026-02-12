@@ -1,0 +1,45 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#6210
+    [34mall[39m: [
+      [34;4mApp\Models\ShipmentStatus[39;24m {#6212
+        [34mid[39m: [35m1[39m,
+        [34mname[39m: "[32mتم التوصل[39m",
+        [34mcolor[39m: "[32m#4caf50[39m",
+        [34mis_default[39m: [35m0[39m,
+        [34mcreated_at[39m: "[32m2025-04-26 22:09:05[39m",
+        [34mupdated_at[39m: "[32m2025-04-26 22:09:05[39m",
+      },
+      [34;4mApp\Models\ShipmentStatus[39;24m {#6213
+        [34mid[39m: [35m2[39m,
+        [34mname[39m: "[32mمرتجع[39m",
+        [34mcolor[39m: "[32m#f44336[39m",
+        [34mis_default[39m: [35m0[39m,
+        [34mcreated_at[39m: "[32m2025-04-26 22:09:05[39m",
+        [34mupdated_at[39m: "[32m2025-04-26 22:09:05[39m",
+      },
+      [34;4mApp\Models\ShipmentStatus[39;24m {#6214
+        [34mid[39m: [35m3[39m,
+        [34mname[39m: "[32mعهدة أو تدوير[39m",
+        [34mcolor[39m: "[32m#2196f3[39m",
+        [34mis_default[39m: [35m0[39m,
+        [34mcreated_at[39m: "[32m2025-04-26 22:09:05[39m",
+        [34mupdated_at[39m: "[32m2025-04-26 22:09:05[39m",
+      },
+      [34;4mApp\Models\ShipmentStatus[39;24m {#6215
+        [34mid[39m: [35m34[39m,
+        [34mname[39m: "[32mغير محدد[39m",
+        [34mcolor[39m: "[32m#000000[39m",
+        [34mis_default[39m: [35m0[39m,
+        [34mcreated_at[39m: "[32m2025-04-27 18:08:17[39m",
+        [34mupdated_at[39m: "[32m2025-04-27 18:08:17[39m",
+      },
+      [34;4mApp\Models\ShipmentStatus[39;24m {#6216
+        [34mid[39m: [35m35[39m,
+        [34mname[39m: "[32mغير محدد[39m",
+        [34mcolor[39m: "[32m#000000[39m",
+        [34mis_default[39m: [35m0[39m,
+        [34mcreated_at[39m: "[32m2025-04-27 18:20:03[39m",
+        [34mupdated_at[39m: "[32m2025-04-27 18:20:03[39m",
+      },
+    ],
+  }
+

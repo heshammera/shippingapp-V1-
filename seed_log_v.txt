@@ -1,0 +1,144 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42703]: Undefined column: 7 ERROR:  column "description" of relation "roles" does not exist
+LINE 1: insert into "roles" ("created_at", "description", "guard_nam...
+                                           ^ (Connection: pgsql, SQL: insert into "roles" ("created_at", "description", "guard_name", "id", "name", "updated_at") values (2025-05-01 06:51:37, مشاهد فقط, web, 1, viewer, 2025-05-01 09:28:09), (2025-05-01 06:51:37, مندوب, web, 2, delivery_agent, 2025-05-01 09:28:09), (2025-05-01 08:30:44, مودريتور, web, 3, moderator, 2025-05-01 09:28:09), (2025-05-01 08:57:43, ادمن, web, 4, admin, 2025-05-01 09:28:09), (2025-05-05 23:03:59, محاسب, web, 5, accountant, 2025-05-05 23:03:59))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[42703]: Undefined column: 7 ERROR:  column "description" of relation "roles" does not exist
+LINE 1: insert into "roles" ("created_at", "description", "guard_nam...
+                                           ^")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Connection.php:540
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3498
+      Illuminate\Database\Connection::insert()
+
+  8   database\seeders\RolesTableSeeder.php:21
+      Illuminate\Database\Query\Builder::insert()
+
+  9   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\RolesTableSeeder::run()
+
+  10  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  11  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  12  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  16  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:61
+      Illuminate\Database\Seeder::__invoke()
+
+  17  database\seeders\DatabaseSeeder.php:21
+      Illuminate\Database\Seeder::call()
+
+  18  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  19  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  20  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  21  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  22  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  24  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  25  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:70
+      Illuminate\Database\Seeder::__invoke()
+
+  26  vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php:155
+      Illuminate\Database\Console\Seeds\SeedCommand::Illuminate\Database\Console\Seeds\{closure}()
+
+  27  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:69
+      Illuminate\Database\Eloquent\Model::unguarded()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Seeds\SeedCommand::handle()
+
+  29  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  30  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  31  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  32  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  33  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  34  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  35  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  36  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  37  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  38  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  39  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  40  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

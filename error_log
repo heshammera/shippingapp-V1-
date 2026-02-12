@@ -1,0 +1,6 @@
+[02-May-2025 03:15:34 UTC] PHP Fatal error:  Trait "App\Models\HasRoles" not found in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/app/Models/User.php on line 12
+[02-May-2025 03:17:02 UTC] PHP Fatal error:  Trait "App\Models\HasRoles" not found in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/app/Models/User.php on line 12
+[02-May-2025 04:11:41 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\ShipmentController as ShipmentController because the name is already in use in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/routes/web.php on line 22
+[02-May-2025 04:11:41 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\ShipmentController as ShipmentController because the name is already in use in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/routes/web.php on line 22
+[02-May-2025 04:11:42 UTC] PHP Fatal error:  Cannot use App\Http\Controllers\ShipmentController as ShipmentController because the name is already in use in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/routes/web.php on line 22
+[06-May-2025 05:40:59 UTC] PHP Fatal error:  Constant expression contains invalid operations in /home/cifnongwjnhb/public_html/shippingapp.naseeg.store/app/Providers/EventServiceProvider.php on line 13

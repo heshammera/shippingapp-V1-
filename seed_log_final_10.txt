@@ -1,0 +1,49 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  1,501 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  634 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+  Database\Seeders\UsersTableSeeder  575 ms DONE  
+
+  Database\Seeders\ModelHasRolesTableSeeder  RUNNING  
+  Database\Seeders\ModelHasRolesTableSeeder  545 ms DONE  
+
+  Database\Seeders\RoleHasPermissionsTableSeeder  RUNNING  
+  Database\Seeders\RoleHasPermissionsTableSeeder  631 ms DONE  
+
+  Database\Seeders\ShippingCompaniesTableSeeder  RUNNING  
+  Database\Seeders\ShippingCompaniesTableSeeder  1,236 ms DONE  
+
+  Database\Seeders\DeliveryAgentsTableSeeder  RUNNING  
+  Database\Seeders\DeliveryAgentsTableSeeder  677 ms DONE  
+
+  Database\Seeders\ShipmentStatusesTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update or delete on table "shipment_statuses" violates foreign key constraint "shipments_status_id_foreign" on table "shipments"
+DETAIL:  Key (id)=(37) is still referenced from table "shipments". (Connection: pgsql, SQL: delete from "shipment_statuses")
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:612
+      PDOException::("SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update or delete on table "shipment_statuses" violates foreign key constraint "shipments_status_id_foreign" on table "shipments"
+DETAIL:  Key (id)=(37) is still referenced from table "shipments".")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:612
+      PDOStatement::execute()
+

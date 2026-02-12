@@ -1,0 +1,168 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  2,283 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  612 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+  Database\Seeders\UsersTableSeeder  611 ms DONE  
+
+  Database\Seeders\ModelHasRolesTableSeeder  RUNNING  
+  Database\Seeders\ModelHasRolesTableSeeder  718 ms DONE  
+
+  Database\Seeders\RoleHasPermissionsTableSeeder  RUNNING  
+  Database\Seeders\RoleHasPermissionsTableSeeder  814 ms DONE  
+
+  Database\Seeders\ShippingCompaniesTableSeeder  RUNNING  
+  Database\Seeders\ShippingCompaniesTableSeeder  611 ms DONE  
+
+  Database\Seeders\DeliveryAgentsTableSeeder  RUNNING  
+  Database\Seeders\DeliveryAgentsTableSeeder  611 ms DONE  
+
+  Database\Seeders\ShipmentStatusesTableSeeder  RUNNING  
+  Database\Seeders\ShipmentStatusesTableSeeder  612 ms DONE  
+
+  Database\Seeders\ProductsTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42703]: Undefined column: 7 ERROR:  column "cost_price" of relation "products" does not exist
+LINE 1: insert into "products" ("colors", "cost_price", "created_at"...
+                                          ^ (Connection: pgsql, SQL: insert into "products" ("colors", "cost_price", "created_at", "id", "name", "price", "sizes", "updated_at") values (ابيض,اسود,رصاصي,بيج,بني,بيبي بلو,بيبي بينك,فوشيا,مخطط بني,مخطط بيج,مخطط اسود,مخطط أبيض,مخطط بينك,مخطط موف,مخطط أخضر,مخطط لبني, 0.00, 2025-05-14 21:59:08, 5, بيزك (نص), 75, -, 2025-07-04 15:03:30), (ابيض,اسود,رصاصي,بيج,بني,بيبي بلو,بيبي بينك,فوشيا, 0.00, 2025-05-21 13:05:07, 6, بيزك (كت), 75, -, 2025-06-17 11:24:03), ((نص كم) ابيض مخطط موف, (نص كم)  اسود مخطط ابيض, (نص كم) ابيض مخطط بينك, (نص كم) ابيض مخطط بيج, اسود, ابيض, بيبي بينك, بيج (نص فقط), رصاصي, بيبي بلو, بيج نوع البيزك: كت, رصاصي نوع البيزك: كت, ابيض نوع البيزك: كت, اسود نوع البيزك: كت, بيج, فوشيا, (نص)مخطط ابيض, (نص)مخطط بني, (نص)مخطط اسود, (نص)مخطط بيج, (نص)مخطط بينك, (نص)مخطط ليموني, (نص)مخطط موف, (نص)مخطط اسود نوع البيزك: نص, (نص)مخطط بيج نوع البيزك: نص, اسود نوع البيزك: نص, بيبي بينك نوع البيزك: نص, رصاصي نوع البيزك: نص, ابيض نوع البيزك: نص, (نص)مخطط بينك نوع البيزك: كت, بيبي بينك نوع البيزك: كت, (نص)مخطط ابيض نوع البيزك: كت, بيج نوع البيزك: نص, (نص)مخطط ابيض نوع البيزك: نص, (نص)مخطط بيج نوع البيزك: كت, فوشيا نوع البيزك: كت, (نص)مخطط اسود نوع البيزك: كت, 0.00, 2025-06-29 19:55:02, 16, بيزك ديربي H, 300, نص, كت, 2025-07-16 17:45:21), (حسب ما تم اختياره, 0.00, 2025-07-19 22:35:19, 18, منتجات أخرى, 250, -, 2025-07-19 22:36:10))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[42703]: Undefined column: 7 ERROR:  column "cost_price" of relation "products" does not exist
+LINE 1: insert into "products" ("colors", "cost_price", "created_at"...
+                                          ^")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Connection.php:540
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3498
+      Illuminate\Database\Connection::insert()
+
+  8   database\seeders\ProductsTableSeeder.php:21
+      Illuminate\Database\Query\Builder::insert()
+
+  9   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\ProductsTableSeeder::run()
+
+  10  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  11  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  12  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  16  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:61
+      Illuminate\Database\Seeder::__invoke()
+
+  17  database\seeders\DatabaseSeeder.php:21
+      Illuminate\Database\Seeder::call()
+
+  18  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  19  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  20  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  21  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  22  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  24  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  25  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:70
+      Illuminate\Database\Seeder::__invoke()
+
+  26  vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php:155
+      Illuminate\Database\Console\Seeds\SeedCommand::Illuminate\Database\Console\Seeds\{closure}()
+
+  27  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:69
+      Illuminate\Database\Eloquent\Model::unguarded()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Seeds\SeedCommand::handle()
+
+  29  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  30  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  31  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  32  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  33  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  34  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  35  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  36  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  37  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  38  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  39  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  40  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+

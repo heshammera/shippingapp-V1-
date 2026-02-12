@@ -1,0 +1,151 @@
+﻿
+   INFO  Seeding database.  
+
+  Database\Seeders\RolesTableSeeder  RUNNING  
+  Database\Seeders\RolesTableSeeder  1,750 ms DONE  
+
+  Database\Seeders\PermissionsTableSeeder  RUNNING  
+  Database\Seeders\PermissionsTableSeeder  611 ms DONE  
+
+  Database\Seeders\UsersTableSeeder  RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42703]: Undefined column: 7 ERROR:  column "theme_color" of relation "users" does not exist
+LINE 1: ...d", "phone", "remember_token", "role", "role_id", "theme_col...
+                                                             ^ (Connection: pgsql, SQL: insert into "users" ("address", "created_at", "email", "email_verified_at", "expires_at", "id", "is_active", "last_login_at", "name", "password", "phone", "remember_token", "role", "role_id", "theme_color", "updated_at") values (Maadi cornich, El mohandseen towers Num 5 flat Num 22
+El mohandseen towers Num 5 flat Num 22, 2025-04-27 01:50:54, hesham3@example.com, , ?, 4, 1, 2025-07-23 13:19:39, hesho, $2y$12$.PBuM/kTUzNPxEQnl6X3nujhWX2ZvZ2/PHdTXDbYwn0xVUYmqnKGK, 01124116368, , admin, 4., #34495E, 2025-07-23 13:19:39), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-01 09:28:48, ahmEEed@gmail.com, , ?, 8, 1, 2025-06-27 12:25:34, ahmed, $2y$12$k5uDSt0OxD2oOlh/mr1BZukGwxj6ibp9wyOS.l94e8p3MYRshIqXi, 01124116368, , delivery_agent, 2, #2C3E50, 2025-06-27 12:25:34), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-01 09:31:34, hesham@gmai.com, , ?, 9, 1, 2025-05-08 23:22:40, hesham, $2y$12$2XI67f8tY4F4SSw8M3XcMe/WK8ClCv66dgINvWe1CcX1.YIKkksUi, 12345678, , delivery_agent, 2, #2C3E50, 2025-05-08 23:22:40), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-01 09:48:07, nour@gmail.com, , ?, 10, 1, 2025-06-27 12:26:33, nour, $2y$12$RM5JXSZAcwP27orIijWKbuclBIJlLk4d2PzZGawuNRSjfeJDmJIgC, 01124116368, , moderator, 3, #2C3E50, 2025-06-27 12:26:33), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-06 05:28:34, hesho@r.F, ?, ?, 12, 1, 2025-06-27 12:27:40, belal, $2y$12$r/Y0RRiTmolR9O/YOCnY1eBYutWT7N3nqphBqRyx/lTeGLjN7FSC2, 01124116368, ?, accountant, 5, #2C3E50, 2025-06-27 12:27:40), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-08 13:15:48, hend@g.com, ?, ?, 18, 0, 2025-05-08 22:31:23, hend, $2y$12$2DcuVAw3JaWO19ZezBo3c.m92NUd.bXUKOESxgE7Vd6pSxMigy1Re, 01124116368, ?, delivery_agent, 2, #2C3E50, 2025-05-08 22:31:23), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-08 17:01:11, hend@r.com1, ?, 2025-05-09 17:32:57, 27, 0, ?, hany1, $2y$12$NBzTyPtuognjbq5RruQZc.F8UDb3Gw8lllW5pYKuj91oMk3uwvchW, 0112411jhgffgh6368, ?, admin, 4, #2C3E50, 2025-05-08 17:32:57), (Maadi cornich, El mohandseen towers Num 5 flat Num 22, 2025-05-08 22:30:27, hend@t.com, ?, 2025-05-11 22:30:27, 28, 1, ?, يوسف, $2y$12$8.VHK8sVbB1/oOVmICDdvOz59LiUfj3BiecaF3LHrN3aavEJCn5Kq, 01124116368, ?, delivery_agent, 2, #2C3E50, 2025-05-08 22:30:27), (badrashin, giza, 2025-05-25 17:10:05, reham@f.co, ?, 2125-05-22 17:24:48, 31, 1, 2025-05-25 17:24:19, reham, $2y$12$ynLIUnNH9Iva7iDlNMa5cu0a/rDWSc4S7C1LKGxgW6jSFgWkaYieW, 1124116368, ?, admin, 4, #2C3E50, 2025-05-25 17:24:48), (?, ?, test_restore@example.com, ?, ?, 32, ?, ?, اختبار_استرجاع, $2y$12$MjWs9kxEiwuOhseveuowt.4S25dZeL7TkVgiGlv3.JTvrLPDsNvWi, ?, ?, ?, ?, #2C3E50, ?))
+
+  at vendor\laravel\framework\src\Illuminate\Database\Connection.php:829
+    825▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    826▕                 );
+    827▕             }
+    828▕ 
+  ➜ 829▕             throw new QueryException(
+    830▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    831▕             );
+    832▕         }
+    833▕     }
+
+  1   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOException::("SQLSTATE[42703]: Undefined column: 7 ERROR:  column "theme_color" of relation "users" does not exist
+LINE 1: ...d", "phone", "remember_token", "role", "role_id", "theme_col...
+                                                             ^")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Connection.php:587
+      PDOStatement::execute()
+
+  3   vendor\laravel\framework\src\Illuminate\Database\Connection.php:816
+      Illuminate\Database\Connection::Illuminate\Database\{closure}()
+
+  4   vendor\laravel\framework\src\Illuminate\Database\Connection.php:783
+      Illuminate\Database\Connection::runQueryCallback()
+
+  5   vendor\laravel\framework\src\Illuminate\Database\Connection.php:576
+      Illuminate\Database\Connection::run()
+
+  6   vendor\laravel\framework\src\Illuminate\Database\Connection.php:540
+      Illuminate\Database\Connection::statement()
+
+  7   vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:3498
+      Illuminate\Database\Connection::insert()
+
+  8   database\seeders\UsersTableSeeder.php:21
+      Illuminate\Database\Query\Builder::insert()
+
+  9   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\UsersTableSeeder::run()
+
+  10  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  11  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  12  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  13  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  14  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  15  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  16  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:61
+      Illuminate\Database\Seeder::__invoke()
+
+  17  database\seeders\DatabaseSeeder.php:21
+      Illuminate\Database\Seeder::call()
+
+  18  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  19  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  20  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  21  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  22  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  23  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:184
+      Illuminate\Container\Container::call()
+
+  24  vendor\laravel\framework\src\Illuminate\Database\Seeder.php:193
+      Illuminate\Database\Seeder::Illuminate\Database\{closure}()
+
+  25  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:70
+      Illuminate\Database\Seeder::__invoke()
+
+  26  vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php:155
+      Illuminate\Database\Console\Seeds\SeedCommand::Illuminate\Database\Console\Seeds\{closure}()
+
+  27  vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php:69
+      Illuminate\Database\Eloquent\Model::unguarded()
+
+  28  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Illuminate\Database\Console\Seeds\SeedCommand::handle()
+
+  29  vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+
+  30  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+      Illuminate\Container\Util::unwrapIfClosure()
+
+  31  vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+      Illuminate\Container\BoundMethod::callBoundMethod()
+
+  32  vendor\laravel\framework\src\Illuminate\Container\Container.php:662
+      Illuminate\Container\BoundMethod::call()
+
+  33  vendor\laravel\framework\src\Illuminate\Console\Command.php:211
+      Illuminate\Container\Container::call()
+
+  34  vendor\symfony\console\Command\Command.php:326
+      Illuminate\Console\Command::execute()
+
+  35  vendor\laravel\framework\src\Illuminate\Console\Command.php:180
+      Symfony\Component\Console\Command\Command::run()
+
+  36  vendor\symfony\console\Application.php:1096
+      Illuminate\Console\Command::run()
+
+  37  vendor\symfony\console\Application.php:324
+      Symfony\Component\Console\Application::doRunCommand()
+
+  38  vendor\symfony\console\Application.php:175
+      Symfony\Component\Console\Application::doRun()
+
+  39  vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php:201
+      Symfony\Component\Console\Application::run()
+
+  40  artisan:35
+      Illuminate\Foundation\Console\Kernel::handle()
+
