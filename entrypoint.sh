@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# Set APP_URL if not set, using Render's env var
+if [ -n "$RENDER_EXTERNAL_URL" ]; then
+    export APP_URL="$RENDER_EXTERNAL_URL"
+fi
+
 # Run migrations (force for automation)
 echo "Running migrations..."
 php artisan migrate --force
