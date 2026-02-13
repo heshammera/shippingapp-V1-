@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: shipping-app
+    env: docker
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        fromService:
+          type: web
+          name: shipping-app
+          property: url
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromService:
+          type: psql
+          name: shipping-db
+          property: host
+      - key: DB_PORT
+        fromService:
+          type: psql
+          name: shipping-db
+          property: port
+      - key: DB_DATABASE
+        fromService:
+          type: psql
+          name: shipping-db
+          property: database
+      - key: DB_USERNAME
+        fromService:
+          type: psql
+          name: shipping-db
+          property: user
+      - key: DB_PASSWORD
+        fromService:
+          type: psql
+          name: shipping-db
+          property: password
+
+databases:
+  - name: shipping-db
+    plan: free
+    databaseName: shipping
+    user: shipping_user
