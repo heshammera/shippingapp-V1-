@@ -7,7 +7,6 @@ tests
 storage/
 storage/**
 database/
-vendor/
 node_modules/
 .phpunit.result.cache
 phpunit.xml
