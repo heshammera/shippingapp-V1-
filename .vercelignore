@@ -1,8 +1,24 @@
 .git
 .env
-storage/framework/cache/data/*
-storage/framework/sessions/*
-storage/framework/views/*
-storage/logs/*
+.env.example
+.gitattributes
+.github
 tests
+storage
+database
 vendor
+node_modules
+.phpunit.result.cache
+phpunit.xml
+README.md
+_ide_helper.php
+_ide_helper_models.php
+.php-cs-fixer.dist.php
+npm-debug.log
+yarn-error.log
+auth.json
+# Exclude potential large assets
+public/storage
+# Exclude text logs
+*.log
+*.txt
