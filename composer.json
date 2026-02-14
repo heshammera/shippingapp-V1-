@@ -25,6 +25,9 @@
         "spatie/laravel-backup": "^9.3",
         "spatie/laravel-permission": "*"
     },
+    "replace": {
+        "mpdf/mpdf": "*"
+    },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "kitloong/laravel-migrations-generator": "^7.0",

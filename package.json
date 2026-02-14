@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "vercel-build": "composer install --no-dev --optimize-autoloader && php scripts/cleanup_google_services.php"
     },
     "devDependencies": {
         "axios": "^1.6.4",
