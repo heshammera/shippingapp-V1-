@@ -1,7 +1,7 @@
 <?php
 
 $vendorDir = __DIR__ . '/../vendor';
-$googleServicesDir = $vendorDir . '/google/apiclient-services/src/Google/Service';
+$googleServicesDir = $vendorDir . '/google/apiclient-services/src';
 
 if (!is_dir($googleServicesDir)) {
     echo "Google Services directory not found: $googleServicesDir\n";
