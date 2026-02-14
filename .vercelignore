@@ -4,10 +4,11 @@
 .gitattributes
 .github
 tests
-storage
-database
-vendor
-node_modules
+storage/
+storage/**
+database/
+vendor/
+node_modules/
 .phpunit.result.cache
 phpunit.xml
 README.md
