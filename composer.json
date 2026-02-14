@@ -74,7 +74,12 @@
             "dont-discover": [
                 "spatie/laravel-backup"
             ]
-        }
+        },
+        "google/apiclient-services": [
+            "Drive",
+            "Sheets",
+            "Oauth2"
+        ]
     },
     "config": {
         "optimize-autoloader": true,
