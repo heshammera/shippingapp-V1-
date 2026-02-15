@@ -137,6 +137,16 @@ Route::get('/admin/sync-google-sheet', function () {
     return back()->with('success', '✅ تمت مزامنة الشحنات من Google Sheet بنجاح!');
 })->middleware('auth');
 
+// 🔥 TEMPORARY MIGRATION ROUTE
+Route::get('/migrate-db', function() {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        return '<h1>✅ Migration Completed Successfully</h1><pre>' . \Illuminate\Support\Facades\Artisan::output() . '</pre>';
+    } catch (\Exception $e) {
+        return '<h1>❌ Migration Failed</h1><pre>' . $e->getMessage() . '</pre>';
+    }
+});
+
 // ✅ صفحة الدخول
 Route::middleware('guest')->group(function () {
     // Fallback for Filament POST login attempts (fixes MethodNotAllowed)

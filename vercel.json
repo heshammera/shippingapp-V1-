@@ -41,8 +41,7 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "SESSION_SECURE_COOKIE": "true",
+        "SESSION_DRIVER": "database",
         "SESSION_LIFETIME": "120"
     }
 }
