@@ -29,25 +29,14 @@ try {
     if (isset($_SERVER['REQUEST_URI']) && str_contains($_SERVER['REQUEST_URI'], 'migrate-db')) {
         putenv('SESSION_DRIVER=array');
         $_ENV['SESSION_DRIVER'] = 'array';
+    } else {
+        // Force database driver for everything else
+        putenv('SESSION_DRIVER=database');
+        $_ENV['SESSION_DRIVER'] = 'database';
     }
 
-    // Bootstrap Laravel
-    require __DIR__ . '/../vendor/autoload.php';
-    $app = require __DIR__ . '/../bootstrap/app.php';
-
-    // Set storage path to /tmp for Vercel (Read-only filesystem fix)
-    $app->useStoragePath('/tmp');
-    
-    // Ensure storage structure exists in /tmp
-    if (!is_dir('/tmp/framework/views')) {
-        mkdir('/tmp/framework/views', 0777, true);
-    }
-    if (!is_dir('/tmp/framework/cache')) {
-        mkdir('/tmp/framework/cache', 0777, true);
-    }
-    if (!is_dir('/tmp/logs')) {
-        mkdir('/tmp/logs', 0777, true);
-    }
+    // Force clear config cache to pick up changes
+    $app->make(\Illuminate\Contracts\Console\Kernel::class)->call('config:clear');
 
     $kernel = $app->make(\Illuminate\Contracts\Http\Kernel::class);
 

@@ -42,6 +42,8 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "database",
-        "SESSION_LIFETIME": "120"
+        "SESSION_LIFETIME": "120",
+        "SESSION_SECURE_COOKIE": "false",
+        "SESSION_SAME_SITE": "lax"
     }
 }
