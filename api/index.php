@@ -13,6 +13,7 @@ try {
     chdir(__DIR__ . '/../public');
     
     // Bootstrap Laravel
+    require __DIR__ . '/../vendor/autoload.php';
     $app = require __DIR__ . '/../bootstrap/app.php';
 
     // Set storage path to /tmp for Vercel (Read-only filesystem fix)
