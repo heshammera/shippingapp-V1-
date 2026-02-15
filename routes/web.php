@@ -140,10 +140,21 @@ Route::get('/admin/sync-google-sheet', function () {
 // 🔥 TEMPORARY MIGRATION ROUTE
 Route::get('/migrate-db', function() {
     try {
+        // Force run the specific migration file for sessions
+        \Illuminate\Support\Facades\Artisan::call('migrate', [
+            '--force' => true,
+            '--path' => 'database/migrations/2025_01_01_000000_create_sessions_table.php'
+        ]);
+        
+        $output = \Illuminate\Support\Facades\Artisan::output();
+        
+        // Also try running all migrations to be sure
         \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
-        return '<h1>✅ Migration Completed Successfully</h1><pre>' . \Illuminate\Support\Facades\Artisan::output() . '</pre>';
+        $output .= "\n" . \Illuminate\Support\Facades\Artisan::output();
+
+        return '<h1>✅ Migration Completed Successfully</h1><pre>' . $output . '</pre>';
     } catch (\Exception $e) {
-        return '<h1>❌ Migration Failed</h1><pre>' . $e->getMessage() . '</pre>';
+        return '<h1>❌ Migration Failed</h1><pre>' . $e->getMessage() . "\n" . $e->getTraceAsString() . '</pre>';
     }
 });
 
