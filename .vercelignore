@@ -4,9 +4,10 @@
 .gitattributes
 .github
 tests
-storage/
-storage/**
-database/
+storage/logs/**
+storage/framework/cache/**
+storage/framework/sessions/**
+storage/framework/testing/**
 node_modules/
 .phpunit.result.cache
 phpunit.xml
@@ -17,8 +18,5 @@ _ide_helper_models.php
 npm-debug.log
 yarn-error.log
 auth.json
-# Exclude potential large assets
-public/storage
 # Exclude text logs
 *.log
-*.txt
