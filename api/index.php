@@ -13,7 +13,31 @@ try {
     chdir(__DIR__ . '/../public');
     
     // Bootstrap Laravel
-    require __DIR__ . '/../public/index.php';
+    $app = require __DIR__ . '/../bootstrap/app.php';
+
+    // Set storage path to /tmp for Vercel (Read-only filesystem fix)
+    $app->useStoragePath('/tmp');
+    
+    // Ensure storage structure exists in /tmp
+    if (!is_dir('/tmp/framework/views')) {
+        mkdir('/tmp/framework/views', 0777, true);
+    }
+    if (!is_dir('/tmp/framework/cache')) {
+        mkdir('/tmp/framework/cache', 0777, true);
+    }
+    if (!is_dir('/tmp/logs')) {
+        mkdir('/tmp/logs', 0777, true);
+    }
+
+    $kernel = $app->make(\Illuminate\Contracts\Http\Kernel::class);
+
+    $response = $kernel->handle(
+        $request = \Illuminate\Http\Request::capture()
+    );
+
+    $response->send();
+
+    $kernel->terminate($request, $response);
 } catch (\Throwable $e) {
     // Display error for debugging
     http_response_code(500);
