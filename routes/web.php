@@ -183,6 +183,26 @@ Route::get('/debug-session', function() {
     ];
 });
 
+// 🔥 TEST LOGIN (Isolated Flow)
+Route::get('/test-login', function() {
+    $user = \App\Models\User::first();
+    if (!$user) return 'No users found!';
+    
+    Auth::login($user);
+    $session_id = session()->getId();
+    
+    return "Logged in as User ID: {$user->id}. <br>Session ID: {$session_id} <br><a href='/test-check'>check login status</a>";
+});
+
+Route::get('/test-check', function() {
+    $user = auth()->user();
+    $session_id = session()->getId();
+    if ($user) {
+        return "✅ STILL LOGGED IN! <br>User: {$user->name} ({$user->id}) <br>Session: {$session_id}";
+    }
+    return "❌ LOGGED OUT (Session Lost). <br>Session: {$session_id}";
+});
+
 // ✅ صفحة الدخول
 Route::middleware('guest')->group(function () {
     // Fallback for Filament POST login attempts (fixes MethodNotAllowed)

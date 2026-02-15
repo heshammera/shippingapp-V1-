@@ -21,6 +21,8 @@ try {
             'ENV_SESSION_DRIVER' => getenv('SESSION_DRIVER'),
             'URI' => $_SERVER['REQUEST_URI'],
             'Time' => date('Y-m-d H:i:s'),
+            'COOKIES' => $_COOKIE,
+            'HEADERS' => getallheaders(),
         ]);
         exit;
     }
