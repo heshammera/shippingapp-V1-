@@ -12,6 +12,19 @@ try {
     // Change working directory to public folder
     chdir(__DIR__ . '/../public');
     
+    // RAW DEBUG ROUTE (Bypassing Laravel Router)
+    if (isset($_SERVER['REQUEST_URI']) && str_contains($_SERVER['REQUEST_URI'], 'debug-session-raw')) {
+        header('Content-Type: application/json');
+        echo json_encode([
+            'STATUS' => 'Deployment Active',
+            'ENV_APP_KEY' => getenv('APP_KEY') ? 'Set' : 'Missing',
+            'ENV_SESSION_DRIVER' => getenv('SESSION_DRIVER'),
+            'URI' => $_SERVER['REQUEST_URI'],
+            'Time' => date('Y-m-d H:i:s'),
+        ]);
+        exit;
+    }
+
     // Bootstrap Laravel
     require __DIR__ . '/../vendor/autoload.php';
     $app = require __DIR__ . '/../bootstrap/app.php';
