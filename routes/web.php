@@ -213,10 +213,14 @@ Route::middleware('guest')->group(function () {
     Route::view('/login', 'auth.login')->name('login');
 
     Route::post('/login', function (Request $request) {
-        if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
-            return redirect()->intended('/redirect-by-role');
+        $credentials = ['name' => $request->name, 'password' => $request->password];
+        
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            return "<h1>🚀 Login Successful!</h1><p>User: {$user->name}</p><p>Role: {$user->role}</p><p>Preparing to redirect...</p><a href='/redirect-by-role'>Click here to continue</a>";
         }
-        return back()->with('error', 'بيانات الدخول غير صحيحة');
+        
+        return "<h1>❌ Login Failed via Auth::attempt()</h1><p>Credentials tried: " . htmlspecialchars($request->name) . "</p>";
     })->name('login.post');
 });
 
