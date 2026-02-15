@@ -52,8 +52,13 @@ try {
     if (!is_dir('/tmp/logs')) {
         mkdir('/tmp/logs', 0777, true);
     }
-    // Force clear config cache to pick up changes
-    $app->make(\Illuminate\Contracts\Console\Kernel::class)->call('config:clear');
+    // Fix APP_URL if it's not set correctly or contains Vercel placeholder
+    if (!getenv('APP_URL') || str_contains(getenv('APP_URL'), '${VERCEL_URL}')) {
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+        putenv("APP_URL={$protocol}{$host}");
+        $_ENV['APP_URL'] = "{$protocol}{$host}";
+    }
 
     $kernel = $app->make(\Illuminate\Contracts\Http\Kernel::class);
 
