@@ -18,7 +18,9 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', env('APP_ENV') === 'production' ? 'cookie' : 'file'),
+    'driver' => (isset($_SERVER['REQUEST_URI']) && str_contains($_SERVER['REQUEST_URI'], 'migrate-db')) 
+        ? 'array' 
+        : env('SESSION_DRIVER', env('APP_ENV') === 'production' ? 'cookie' : 'file'),
 
     /*
     |--------------------------------------------------------------------------
