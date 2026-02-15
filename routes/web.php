@@ -158,6 +158,31 @@ Route::get('/migrate-db', function() {
     }
 });
 
+// 🔥 TEMPORARY DEBUG ROUTE
+Route::get('/debug-session', function() {
+    $sessionConfig = config('session');
+    $checkTable = 'Unknown';
+    try {
+        $checkTable = \Illuminate\Support\Facades\Schema::hasTable('sessions') ? '✅ YES' : '❌ NO';
+    } catch (\Exception $e) {
+        $checkTable = '❌ Error: ' . $e->getMessage();
+    }
+    
+    return [
+        'APP_ENV' => env('APP_ENV'),
+        'APP_DEBUG' => env('APP_DEBUG'),
+        'SESSION_DRIVER' => env('SESSION_DRIVER'),
+        'Config Driver' => $sessionConfig['driver'],
+        'Config Lifetime' => $sessionConfig['lifetime'],
+        'Config Secure' => $sessionConfig['secure'],
+        'Session ID' => session()->getId(),
+        'Session Started' => session()->isStarted(),
+        'CSRF Token' => csrf_token(),
+        'Sessions Table Exists' => $checkTable,
+        'User' => auth()->user(),
+    ];
+});
+
 // ✅ صفحة الدخول
 Route::middleware('guest')->group(function () {
     // Fallback for Filament POST login attempts (fixes MethodNotAllowed)
