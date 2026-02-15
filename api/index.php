@@ -25,6 +25,12 @@ try {
         exit;
     }
 
+    // 🔥 FIX CHICKEN-AND-EGG: Force array session driver for migration route
+    if (isset($_SERVER['REQUEST_URI']) && str_contains($_SERVER['REQUEST_URI'], 'migrate-db')) {
+        putenv('SESSION_DRIVER=array');
+        $_ENV['SESSION_DRIVER'] = 'array';
+    }
+
     // Bootstrap Laravel
     require __DIR__ . '/../vendor/autoload.php';
     $app = require __DIR__ . '/../bootstrap/app.php';
