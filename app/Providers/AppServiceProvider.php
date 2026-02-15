@@ -20,7 +20,12 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        // اجبار Laravel يستخدم bootstrap-5
+        // Force HTTPS in production
+        if($this->app->environment('production')) {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+
+        // Force Bootstrap 5 pagination
         Paginator::useBootstrapFive();
         Shipment::observe(ShipmentObserver::class);
         \App\Models\StockMovement::observe(\App\Observers\StockMovementObserver::class);
