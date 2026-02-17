@@ -17,12 +17,12 @@ class InventoryLevelResource extends Resource
 {
     protected static ?string $model = InventoryLevel::class;
 
-    protected static ?string $navigationGroup = 'إدارة المخزون';
+    protected static ?string $navigationGroup = '📦 المخزون';
     protected static ?string $navigationIcon = 'heroicon-o-archive-box';
     protected static ?string $navigationLabel = 'مستويات المخزون';
     protected static ?string $pluralLabel = 'مستويات المخزون';
     protected static ?string $modelLabel = 'مخزون';
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 6;
 
     public static function form(Form $form): Form
     {

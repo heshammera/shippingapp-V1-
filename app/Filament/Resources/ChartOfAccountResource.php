@@ -20,7 +20,7 @@ class ChartOfAccountResource extends Resource
     protected static ?string $pluralLabel = 'الحسابات';
     protected static ?string $modelLabel = 'حساب';
     protected static ?string $navigationGroup = '💰 المالية';
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 7;
 
     public static function form(Form $form): Form
     {

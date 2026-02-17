@@ -16,7 +16,7 @@ class Backups extends Page
     protected static ?string $navigationLabel = 'النسخ الاحتياطي';
     protected static ?string $navigationGroup = '⚙️ النظام';
     protected static ?string $title = 'النسخ الاحتياطي';
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 9;
     protected static string $view = 'filament.pages.backups';
 
     public $backups = [];

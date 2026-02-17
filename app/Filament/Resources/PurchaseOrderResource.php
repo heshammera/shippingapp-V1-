@@ -23,7 +23,7 @@ class PurchaseOrderResource extends Resource
     protected static ?string $navigationLabel = 'أوامر الشراء';
     protected static ?string $pluralLabel = 'أوامر الشراء';
     protected static ?string $modelLabel = 'أمر شراء';
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 7;
 
     public static function form(Form $form): Form
     {

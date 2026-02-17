@@ -21,7 +21,7 @@ class SystemSettings extends Page implements HasForms
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationLabel = 'إعدادات النظام';
     protected static ?string $navigationGroup = '⚙️ النظام';
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 8;
     protected static string $view = 'filament.pages.settings-page';
 
     public ?array $data = [];

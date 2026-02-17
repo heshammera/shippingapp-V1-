@@ -21,7 +21,7 @@ class NotificationSettings extends Page implements HasForms
     protected static ?string $navigationIcon = 'heroicon-o-bell';
     protected static ?string $navigationLabel = 'إعدادات التنبيهات';
     protected static ?string $navigationGroup = '⚙️ النظام';
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 7;
     protected static string $view = 'filament.pages.settings-page';
 
     public ?array $data = [];

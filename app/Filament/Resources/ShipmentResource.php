@@ -26,9 +26,9 @@ class ShipmentResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'الشحنات';
     protected static ?string $navigationGroup = '📦 العمليات';
+    protected static ?int $navigationSort = 1;
     protected static ?string $pluralLabel = 'الشحنات';
     protected static ?string $modelLabel = 'شحنة';
-    protected static ?int $navigationSort = 1;
 
     public static function getEloquentQuery(): Builder
     {

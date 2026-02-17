@@ -19,7 +19,7 @@ class StockMovementResource extends Resource
     protected static ?string $navigationLabel = 'حركات المخزون';
     protected static ?string $pluralLabel = 'أرشيف الحركات';
     protected static ?string $modelLabel = 'حركة';
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
     protected static ?string $navigationGroup = '📦 المخزون';
 
     public static function form(Form $form): Form

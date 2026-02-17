@@ -23,7 +23,7 @@ class IntegrationResource extends Resource
     protected static ?string $pluralLabel = 'عمليات الربط';
     protected static ?string $modelLabel = 'ربط';
     protected static ?string $navigationGroup = '⚙️ النظام';
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {

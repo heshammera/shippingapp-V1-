@@ -21,8 +21,8 @@ class PayrollResource extends Resource
     protected static ?string $navigationLabel = 'الرواتب';
     protected static ?string $pluralLabel = 'مسيرات الرواتب';
     protected static ?string $modelLabel = 'مسير راتب';
-    protected static ?string $navigationGroup = '👥 الموارد البشرية';
-    protected static ?int $navigationSort = 2;
+    protected static ?string $navigationGroup = '💰 المالية';
+    protected static ?int $navigationSort = 5;
 
     public static function form(Form $form): Form
     {

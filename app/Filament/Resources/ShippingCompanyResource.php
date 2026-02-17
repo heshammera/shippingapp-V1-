@@ -17,10 +17,10 @@ class ShippingCompanyResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
     protected static ?string $navigationLabel = 'شركات الشحن';
-    protected static ?string $navigationGroup = '🚚 الشركاء';
+    protected static ?string $navigationGroup = '⚙️ النظام';
     protected static ?string $pluralLabel = 'شركات الشحن';
     protected static ?string $modelLabel = 'شركة شحن';
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {

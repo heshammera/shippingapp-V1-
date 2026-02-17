@@ -71,15 +71,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
-                \App\Filament\Pages\AccountingDashboard::class,
-                // \App\Filament\Pages\ImportShipments::class,
-                // \App\Filament\Pages\GoogleSheetSettings::class,
-                // \App\Filament\Pages\NotificationSettings::class,
-                // \App\Filament\Pages\GeneralSettings::class,
-                // \App\Filament\Pages\SystemSettings::class,
-                // \App\Filament\Pages\AIAssistant::class,
-                // \App\Filament\Pages\Backups::class,
+                // Pages are automatically discovered
             ])
             // ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([

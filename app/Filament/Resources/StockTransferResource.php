@@ -23,7 +23,7 @@ class StockTransferResource extends Resource
     protected static ?string $navigationGroup = '📦 المخزون';
     protected static ?string $pluralLabel = 'تحويلات المخزون';
     protected static ?string $modelLabel = 'تحويل مخزني';
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {

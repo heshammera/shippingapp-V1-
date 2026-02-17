@@ -23,8 +23,8 @@ class AgentSettlementResource extends Resource
     protected static ?string $navigationLabel = 'تسويات المناديب';
     protected static ?string $pluralLabel = 'تسويات المناديب';
     protected static ?string $modelLabel = 'تسوية';
-    protected static ?string $navigationGroup = 'الشؤون المالية';
-    protected static ?int $navigationSort = 5;
+    protected static ?string $navigationGroup = '💰 المالية';
+    protected static ?int $navigationSort = 6;
 
     public static function form(Form $form): Form
     {

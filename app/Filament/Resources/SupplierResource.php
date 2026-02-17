@@ -23,7 +23,7 @@ class SupplierResource extends Resource
     protected static ?string $navigationLabel = 'الموردين';
     protected static ?string $pluralLabel = 'الموردين';
     protected static ?string $modelLabel = 'مورد';
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form
     {

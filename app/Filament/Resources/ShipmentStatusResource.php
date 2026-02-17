@@ -19,7 +19,6 @@ class ShipmentStatusResource extends Resource
     protected static ?string $navigationLabel = 'حالات الشحنات';
     protected static ?string $pluralLabel = 'حالات الشحن';
     protected static ?string $modelLabel = 'حالة شحن';
-    protected static ?string $navigationGroup = '⚙️ النظام';
     protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form

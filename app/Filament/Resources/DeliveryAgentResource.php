@@ -17,10 +17,10 @@ class DeliveryAgentResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $navigationLabel = 'المناديب';
-    protected static ?string $navigationGroup = '🚚 الشركاء';
+    protected static ?string $navigationGroup = '⚙️ النظام';
     protected static ?string $pluralLabel = 'المناديب';
     protected static ?string $modelLabel = 'مندوب';
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 5;
 
     public static function form(Form $form): Form
     {

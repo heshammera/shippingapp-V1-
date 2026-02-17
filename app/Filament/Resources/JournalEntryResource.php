@@ -23,7 +23,7 @@ class JournalEntryResource extends Resource
     protected static ?string $modelLabel = 'قيد يومية';
     protected static ?string $pluralModelLabel = 'القيود اليومية';
     protected static ?string $navigationGroup = '💰 المالية';
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form
     {
