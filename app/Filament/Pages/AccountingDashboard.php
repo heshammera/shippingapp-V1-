@@ -39,7 +39,7 @@ class AccountingDashboard extends Page
     public function getDashboardWidgets(): array
     {
         return [
-            \App\Filament\Widgets\FinancialStatsOverview::class,
+            \App\Filament\Widgets\FinanceStatsWidget::class,
             \App\Filament\Widgets\FinancialChart::class,
             \App\Filament\Widgets\ShippingCompanyBalancesWidget::class,
             \App\Filament\Widgets\RecentCollectionsWidget::class,

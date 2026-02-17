@@ -9,7 +9,7 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Carbon\Carbon;
 
-class FinancialStatsOverview extends BaseWidget
+class FinanceStatsWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
     
