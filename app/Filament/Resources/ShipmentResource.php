@@ -22,6 +22,7 @@ use Filament\Notifications\Notification;
 class ShipmentResource extends Resource
 {
     protected static ?string $model = Shipment::class;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'الشحنات';

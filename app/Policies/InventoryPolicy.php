@@ -13,7 +13,7 @@ class InventoryPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->role === 'admin' || $user->can('inventories.view_any');
+        return $user->hasRole('admin') || $user->can('inventories.view_any');
     }
 
     /**
