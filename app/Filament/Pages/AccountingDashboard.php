@@ -41,8 +41,8 @@ class AccountingDashboard extends Page
         return [
             \App\Filament\Widgets\FinanceStatsWidget::class,
             \App\Filament\Widgets\FinancialChart::class,
-            \App\Filament\Widgets\ShippingCompanyBalancesWidget::class,
-            \App\Filament\Widgets\RecentCollectionsWidget::class,
+            \App\Filament\Widgets\ShippingBalancesWidget::class,
+            \App\Filament\Widgets\LatestCollectionsWidget::class,
             \App\Filament\Widgets\RecentExpensesWidget::class,
         ];
     }

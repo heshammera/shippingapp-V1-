@@ -9,7 +9,7 @@ use Filament\Widgets\TableWidget as BaseWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Illuminate\Support\Facades\DB;
 
-class ShippingCompanyBalancesWidget extends BaseWidget
+class ShippingBalancesWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
 

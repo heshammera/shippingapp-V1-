@@ -8,7 +8,7 @@ use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 
-class RecentCollectionsWidget extends BaseWidget
+class LatestCollectionsWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
 
