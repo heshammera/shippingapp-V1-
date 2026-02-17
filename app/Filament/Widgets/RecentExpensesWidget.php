@@ -11,7 +11,7 @@ use Filament\Widgets\Concerns\InteractsWithPageFilters;
 class RecentExpensesWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
-    protected static bool $shouldRegisterWidget = false;
+    protected static bool $shouldRegisterWidget = true;
 
     protected int|string|array $columnSpan = 'half';
     protected static ?string $heading = 'أحدث المصاريف';
