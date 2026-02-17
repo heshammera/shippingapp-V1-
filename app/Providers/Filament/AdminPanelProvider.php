@@ -55,6 +55,19 @@ class AdminPanelProvider extends PanelProvider
                 \App\Filament\Resources\PayrollResource::class,
                 \App\Filament\Resources\InvoiceResource::class,
                 \App\Filament\Resources\InventoryLevelResource::class,
+                \App\Filament\Resources\PurchaseOrderResource::class,
+                \App\Filament\Resources\SupplierResource::class,
+                \App\Filament\Resources\StockTransferResource::class,
+                \App\Filament\Resources\StockMovementResource::class,
+                \App\Filament\Resources\WarehouseResource::class,
+                \App\Filament\Resources\AgentSettlementResource::class,
+                \App\Filament\Resources\ChartOfAccountResource::class,
+                \App\Filament\Resources\IntegrationResource::class,
+                \App\Filament\Resources\InventoryResource::class,
+                \App\Filament\Resources\JournalEntryResource::class,
+                \App\Filament\Resources\ProductVariantResource::class,
+                \App\Filament\Resources\RoleResource::class,
+                \App\Filament\Resources\ShipmentStatusResource::class,
             ])
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
