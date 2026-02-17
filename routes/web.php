@@ -9,16 +9,24 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 
-Route::get('/fix-admin', function () {
+Route::get('/create-super-admin', function () {
     try {
-        $email = 'admin2@shippingapp.com';
-        $user = User::where('email', $email)->first();
-        if (!$user) return 'User not found';
+        $email = 'admin@admin.com';
+        $password = '12345678';
+        
+        $user = User::firstOrCreate(
+            ['email' => $email],
+            ['name' => 'Super Admin', 'password' => Illuminate\Support\Facades\Hash::make($password)]
+        );
+        
+        // Update password if user already exists to ensure login works
+        $user->password = Illuminate\Support\Facades\Hash::make($password);
+        $user->save();
         
         $role = Role::firstOrCreate(['name' => 'Super Admin', 'guard_name' => 'web']);
         $user->assignRole($role);
         
-        return "SUCCESS: Assigned Super Admin to {$user->email}";
+        return "SUCCESS: Created/Updated user {$user->email} with Super Admin role. Password: $password";
     } catch (\Throwable $e) {
         return "ERROR: " . $e->getMessage();
     }
