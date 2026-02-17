@@ -37,7 +37,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogoHeight('3rem')
             ->favicon('/logo.png')
             ->darkMode(true)
-            ->topNavigation()
+            // ->topNavigation() // Temporarily disabled to troubleshoot missing resources
             ->maxContentWidth('full')
             ->sidebarCollapsibleOnDesktop()
             ->collapsibleNavigationGroups(true)
