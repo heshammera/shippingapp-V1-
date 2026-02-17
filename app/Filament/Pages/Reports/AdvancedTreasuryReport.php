@@ -16,9 +16,9 @@ class AdvancedTreasuryReport extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-scale';
     protected static ?string $navigationLabel = 'تقارير الخزنة';
-    protected static ?string $navigationGroup = 'التقارير المتقدمة';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
+    protected static ?int $navigationSort = 101;
     protected static ?string $slug = 'reports-v2/treasury';
-    protected static ?int $navigationSort = 4;
     protected static string $view = 'filament.pages.reports.advanced-treasury-report';
 
     // Live Filter Properties

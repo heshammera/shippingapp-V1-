@@ -9,7 +9,7 @@ class SettingsHub extends Page
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationLabel = 'الإعدادات';
     protected static ?string $title = 'الإعدادات العامة';
-    protected static ?string $navigationGroup = '⚙️ النظام';
+    protected static ?string $navigationGroup = '⚙️ الإعدادات والربط';
     protected static ?int $navigationSort = 100; // Last item
 
     protected static string $view = 'filament.pages.settings-hub';

@@ -17,9 +17,9 @@ class AdvancedShipmentsReport extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'تقارير الشحنات';
-    protected static ?string $navigationGroup = 'التقارير المتقدمة';
+    protected static ?string $navigationGroup = '📦 إدارة الشحنات';
+    protected static ?int $navigationSort = 99;
     protected static ?string $slug = 'reports-v2/shipments';
-    protected static ?int $navigationSort = 1;
     protected static string $view = 'filament.pages.reports.advanced-shipments-report';
 
     // Live Filter Properties

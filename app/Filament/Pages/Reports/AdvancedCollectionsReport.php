@@ -15,9 +15,9 @@ class AdvancedCollectionsReport extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-banknotes';
     protected static ?string $navigationLabel = 'تقارير التحصيلات';
-    protected static ?string $navigationGroup = 'التقارير المتقدمة';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
+    protected static ?int $navigationSort = 99;
     protected static ?string $slug = 'reports-v2/collections';
-    protected static ?int $navigationSort = 2;
     protected static string $view = 'filament.pages.reports.advanced-collections-report';
 
     // Live Filter Properties

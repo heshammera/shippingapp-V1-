@@ -19,7 +19,7 @@ class DriverDashboard extends Page implements HasTable
     protected static ?string $navigationIcon = 'heroicon-o-truck';
     protected static ?string $navigationLabel = 'مهامي (للمناديب)';
     protected static ?string $title = 'مهام التوصيل';
-    protected static ?string $navigationGroup = 'المندوب';
+    protected static ?string $navigationGroup = '📦 إدارة الشحنات';
     protected static string $view = 'filament.pages.driver-dashboard';
 
     public function table(Table $table): Table

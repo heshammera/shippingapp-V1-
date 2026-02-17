@@ -15,9 +15,9 @@ class AdvancedExpensesReport extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-credit-card';
     protected static ?string $navigationLabel = 'تقارير المصاريف';
-    protected static ?string $navigationGroup = 'التقارير المتقدمة';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
+    protected static ?int $navigationSort = 100;
     protected static ?string $slug = 'reports-v2/expenses';
-    protected static ?int $navigationSort = 3;
     protected static string $view = 'filament.pages.reports.advanced-expenses-report';
 
     // Live Filter Properties

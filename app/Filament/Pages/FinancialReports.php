@@ -17,7 +17,7 @@ class FinancialReports extends Page implements HasForms
     protected static ?string $navigationIcon = 'heroicon-o-document-chart-bar';
     protected static ?string $navigationLabel = 'التقارير المالية';
     protected static ?string $title = 'التقارير المالية المتقدمة';
-    protected static ?string $navigationGroup = '💰 المالية';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
     protected static ?int $navigationSort = 7;
 
     protected static string $view = 'filament.pages.financial-reports';

@@ -19,7 +19,7 @@ class BarcodeScanner extends Page implements HasTable, HasForms
     use InteractsWithForms;
 
     protected static ?string $navigationIcon = 'heroicon-o-qr-code';
-    protected static ?string $navigationGroup = '📦 العمليات';
+    protected static ?string $navigationGroup = '📦 إدارة الشحنات';
     protected static ?string $title = 'ماسح الباركود';
     protected static ?int $navigationSort = 3;
 
