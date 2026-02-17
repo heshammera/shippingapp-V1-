@@ -14,7 +14,6 @@ class FinancialStatsOverview extends BaseWidget
     use InteractsWithPageFilters;
     
     protected static ?int $sort = 3;
-    protected static bool $shouldRegisterWidget = false;
     protected int | string | array $columnSpan = 1;
 
     protected function getStats(): array
