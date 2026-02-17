@@ -21,7 +21,7 @@ class ProductPolicy
      */
     public function view(User $user, Product $product): bool
     {
-        return $user->can('products.view');
+        return $user->hasRole('admin') || $user->can('products.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class ProductPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('products.create');
+        return $user->hasRole('admin') || $user->can('products.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductPolicy
      */
     public function update(User $user, Product $product): bool
     {
-        return $user->can('products.update');
+        return $user->hasRole('admin') || $user->can('products.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class ProductPolicy
      */
     public function delete(User $user, Product $product): bool
     {
-        return $user->can('products.delete');
+        return $user->hasRole('admin') || $user->can('products.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class ProductPolicy
      */
     public function restore(User $user, Product $product): bool
     {
-        return $user->can('products.restore');
+        return $user->hasRole('admin') || $user->can('products.restore');
     }
 
     /**
@@ -61,6 +61,6 @@ class ProductPolicy
      */
     public function forceDelete(User $user, Product $product): bool
     {
-        return $user->can('products.force_delete');
+        return $user->hasRole('admin') || $user->can('products.force_delete');
     }
 }

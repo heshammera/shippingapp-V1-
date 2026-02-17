@@ -21,7 +21,7 @@ class DeliveryAgentPolicy
      */
     public function view(User $user, DeliveryAgent $deliveryAgent): bool
     {
-        return $user->can('delivery_agents.view');
+        return $user->hasRole('admin') || $user->can('delivery_agents.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class DeliveryAgentPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('delivery_agents.create');
+        return $user->hasRole('admin') || $user->can('delivery_agents.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class DeliveryAgentPolicy
      */
     public function update(User $user, DeliveryAgent $deliveryAgent): bool
     {
-        return $user->can('delivery_agents.update');
+        return $user->hasRole('admin') || $user->can('delivery_agents.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class DeliveryAgentPolicy
      */
     public function delete(User $user, DeliveryAgent $deliveryAgent): bool
     {
-        return $user->can('delivery_agents.delete');
+        return $user->hasRole('admin') || $user->can('delivery_agents.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class DeliveryAgentPolicy
      */
     public function restore(User $user, DeliveryAgent $deliveryAgent): bool
     {
-        return $user->can('delivery_agents.restore');
+        return $user->hasRole('admin') || $user->can('delivery_agents.restore');
     }
 
     /**
@@ -61,6 +61,6 @@ class DeliveryAgentPolicy
      */
     public function forceDelete(User $user, DeliveryAgent $deliveryAgent): bool
     {
-        return $user->can('delivery_agents.force_delete');
+        return $user->hasRole('admin') || $user->can('delivery_agents.force_delete');
     }
 }

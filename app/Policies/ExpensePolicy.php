@@ -21,7 +21,7 @@ class ExpensePolicy
      */
     public function view(User $user, Expense $expense): bool
     {
-        return $user->can('expenses.view');
+        return $user->hasRole('admin') || $user->can('expenses.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class ExpensePolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('expenses.create');
+        return $user->hasRole('admin') || $user->can('expenses.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ExpensePolicy
      */
     public function update(User $user, Expense $expense): bool
     {
-        return $user->can('expenses.update');
+        return $user->hasRole('admin') || $user->can('expenses.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class ExpensePolicy
      */
     public function delete(User $user, Expense $expense): bool
     {
-        return $user->can('expenses.delete');
+        return $user->hasRole('admin') || $user->can('expenses.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class ExpensePolicy
      */
     public function restore(User $user, Expense $expense): bool
     {
-        return $user->can('expenses.restore');
+        return $user->hasRole('admin') || $user->can('expenses.restore');
     }
 
     /**
@@ -61,6 +61,6 @@ class ExpensePolicy
      */
     public function forceDelete(User $user, Expense $expense): bool
     {
-        return $user->can('expenses.force_delete');
+        return $user->hasRole('admin') || $user->can('expenses.force_delete');
     }
 }

@@ -21,7 +21,7 @@ class ShipmentStatusPolicy
      */
     public function view(User $user, ShipmentStatus $shipmentStatus): bool
     {
-        return $user->can('statuses.view');
+        return $user->hasRole('admin') || $user->can('statuses.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class ShipmentStatusPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('statuses.create');
+        return $user->hasRole('admin') || $user->can('statuses.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ShipmentStatusPolicy
      */
     public function update(User $user, ShipmentStatus $shipmentStatus): bool
     {
-        return $user->can('statuses.update');
+        return $user->hasRole('admin') || $user->can('statuses.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class ShipmentStatusPolicy
      */
     public function delete(User $user, ShipmentStatus $shipmentStatus): bool
     {
-        return $user->can('statuses.delete');
+        return $user->hasRole('admin') || $user->can('statuses.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class ShipmentStatusPolicy
      */
     public function restore(User $user, ShipmentStatus $shipmentStatus): bool
     {
-        return $user->can('statuses.restore'); // Assuming default or create explicit permission if needed
+        return $user->hasRole('admin') || $user->can('statuses.restore'); // Assuming default or create explicit permission if needed
     }
 
     /**
@@ -61,6 +61,6 @@ class ShipmentStatusPolicy
      */
     public function forceDelete(User $user, ShipmentStatus $shipmentStatus): bool
     {
-        return $user->can('statuses.force_delete'); // Assuming default or create explicit permission if needed
+        return $user->hasRole('admin') || $user->can('statuses.force_delete'); // Assuming default or create explicit permission if needed
     }
 }

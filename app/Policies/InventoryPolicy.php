@@ -21,7 +21,7 @@ class InventoryPolicy
      */
     public function view(User $user, Inventory $inventory): bool
     {
-        return $user->can('inventory.view');
+        return $user->hasRole('admin') || $user->can('inventory.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class InventoryPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('inventory.create');
+        return $user->hasRole('admin') || $user->can('inventory.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class InventoryPolicy
      */
     public function update(User $user, Inventory $inventory): bool
     {
-        return $user->can('inventory.update');
+        return $user->hasRole('admin') || $user->can('inventory.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class InventoryPolicy
      */
     public function delete(User $user, Inventory $inventory): bool
     {
-        return $user->can('inventory.delete');
+        return $user->hasRole('admin') || $user->can('inventory.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class InventoryPolicy
      */
     public function restore(User $user, Inventory $inventory): bool
     {
-        return $user->can('inventory.restore'); // Assuming 'inventory.restore' permission exists if SoftDeletes is used, otherwise 'inventory.delete' or false
+        return $user->hasRole('admin') || $user->can('inventory.restore'); // Assuming 'inventory.restore' permission exists if SoftDeletes is used, otherwise 'inventory.delete' or false
     }
 
     /**
@@ -61,6 +61,6 @@ class InventoryPolicy
      */
     public function forceDelete(User $user, Inventory $inventory): bool
     {
-        return $user->can('inventory.force_delete'); // Assuming 'inventory.force_delete' permission exists
+        return $user->hasRole('admin') || $user->can('inventory.force_delete'); // Assuming 'inventory.force_delete' permission exists
     }
 }

@@ -21,7 +21,7 @@ class CollectionPolicy
      */
     public function view(User $user, Collection $collection): bool
     {
-        return $user->can('collections.view');
+        return $user->hasRole('admin') || $user->can('collections.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class CollectionPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('collections.create');
+        return $user->hasRole('admin') || $user->can('collections.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class CollectionPolicy
      */
     public function update(User $user, Collection $collection): bool
     {
-        return $user->can('collections.update');
+        return $user->hasRole('admin') || $user->can('collections.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class CollectionPolicy
      */
     public function delete(User $user, Collection $collection): bool
     {
-        return $user->can('collections.delete');
+        return $user->hasRole('admin') || $user->can('collections.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class CollectionPolicy
      */
     public function restore(User $user, Collection $collection): bool
     {
-        return $user->can('collections.restore');
+        return $user->hasRole('admin') || $user->can('collections.restore');
     }
 
     /**
@@ -61,6 +61,6 @@ class CollectionPolicy
      */
     public function forceDelete(User $user, Collection $collection): bool
     {
-        return $user->can('collections.force_delete');
+        return $user->hasRole('admin') || $user->can('collections.force_delete');
     }
 }

@@ -21,7 +21,7 @@ class ShippingCompanyPolicy
      */
     public function view(User $user, ShippingCompany $shippingCompany): bool
     {
-        return $user->can('shipping_companies.view');
+        return $user->hasRole('admin') || $user->can('shipping_companies.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class ShippingCompanyPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('shipping_companies.create');
+        return $user->hasRole('admin') || $user->can('shipping_companies.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ShippingCompanyPolicy
      */
     public function update(User $user, ShippingCompany $shippingCompany): bool
     {
-        return $user->can('shipping_companies.update');
+        return $user->hasRole('admin') || $user->can('shipping_companies.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class ShippingCompanyPolicy
      */
     public function delete(User $user, ShippingCompany $shippingCompany): bool
     {
-        return $user->can('shipping_companies.delete');
+        return $user->hasRole('admin') || $user->can('shipping_companies.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class ShippingCompanyPolicy
      */
     public function restore(User $user, ShippingCompany $shippingCompany): bool
     {
-        return $user->can('shipping_companies.restore');
+        return $user->hasRole('admin') || $user->can('shipping_companies.restore');
     }
 
     /**
@@ -61,6 +61,6 @@ class ShippingCompanyPolicy
      */
     public function forceDelete(User $user, ShippingCompany $shippingCompany): bool
     {
-        return $user->can('shipping_companies.force_delete');
+        return $user->hasRole('admin') || $user->can('shipping_companies.force_delete');
     }
 }

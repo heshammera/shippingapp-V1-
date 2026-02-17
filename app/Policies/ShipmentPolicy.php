@@ -21,7 +21,7 @@ class ShipmentPolicy
      */
     public function view(User $user, Shipment $shipment): bool
     {
-        return $user->can('shipments.view');
+        return $user->hasRole('admin') || $user->can('shipments.view');
     }
 
     /**
@@ -29,7 +29,7 @@ class ShipmentPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('shipments.create');
+        return $user->hasRole('admin') || $user->can('shipments.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ShipmentPolicy
      */
     public function update(User $user, Shipment $shipment): bool
     {
-        return $user->can('shipments.update');
+        return $user->hasRole('admin') || $user->can('shipments.update');
     }
 
     /**
@@ -45,7 +45,7 @@ class ShipmentPolicy
      */
     public function delete(User $user, Shipment $shipment): bool
     {
-        return $user->can('shipments.delete');
+        return $user->hasRole('admin') || $user->can('shipments.delete');
     }
 
     /**
@@ -53,7 +53,7 @@ class ShipmentPolicy
      */
     public function restore(User $user, Shipment $shipment): bool
     {
-        return $user->can('shipments.restore');
+        return $user->hasRole('admin') || $user->can('shipments.restore');
     }
 
     /**
@@ -61,7 +61,7 @@ class ShipmentPolicy
      */
     public function forceDelete(User $user, Shipment $shipment): bool
     {
-        return $user->can('shipments.force_delete');
+        return $user->hasRole('admin') || $user->can('shipments.force_delete');
     }
 
     /**
@@ -69,33 +69,33 @@ class ShipmentPolicy
      */
     public function export(User $user): bool
     {
-        return $user->can('shipments.export_excel') || $user->can('shipments.export_pdf');
+        return $user->hasRole('admin') || $user->can('shipments.export_excel') || $user->can('shipments.export_pdf');
     }
 
     public function print(User $user): bool
     {
-        return $user->can('shipments.print_invoices') 
+        return $user->hasRole('admin') || $user->can('shipments.print_invoices') 
             || $user->can('shipments.print_table') 
             || $user->can('shipments.print_thermal');
     }
 
     public function import(User $user): bool
     {
-        return $user->can('shipments.import');
+        return $user->hasRole('admin') || $user->can('shipments.import');
     }
 
     public function bulkDelete(User $user): bool
     {
-        return $user->can('shipments.bulk_delete');
+        return $user->hasRole('admin') || $user->can('shipments.bulk_delete');
     }
 
     public function assignAgent(User $user): bool
     {
-        return $user->can('shipments.assign_agent');
+        return $user->hasRole('admin') || $user->can('shipments.assign_agent');
     }
 
     public function updateStatus(User $user): bool
     {
-        return $user->can('shipments.update_status');
+        return $user->hasRole('admin') || $user->can('shipments.update_status');
     }
 }
