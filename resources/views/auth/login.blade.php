@@ -240,6 +240,13 @@
       </div>
     </div>
 
+    <div class="field" style="margin-bottom: 18px;">
+      <label style="display: flex; align-items: center; font-weight: 400; cursor: pointer; user-select: none;">
+        <input type="checkbox" name="remember" id="rememberMe" style="width: 18px; height: 18px; margin-left: 8px; cursor: pointer; accent-color: var(--primary);">
+        <span style="font-size: 14px;">تذكرني</span>
+      </label>
+    </div>
+
     <div class="actions">
       <button id="loginBtn" type="submit" class="btn">
         <span class="btn-label">تسجيل الدخول</span>

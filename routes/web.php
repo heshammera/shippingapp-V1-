@@ -213,14 +213,58 @@ Route::middleware('guest')->group(function () {
     Route::view('/login', 'auth.login')->name('login');
 
     Route::post('/login', function (Request $request) {
-        $credentials = ['name' => $request->name, 'password' => $request->password];
+        // Validate input
+        $validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
+            'name' => 'required|string',
+            'password' => 'required|string',
+        ], [
+            'name.required' => 'من فضلك اكتب اسم المستخدم.',
+            'password.required' => 'من فضلك اكتب كلمة المرور.',
+        ]);
+
+        if ($validator->fails()) {
+            if ($request->expectsJson() || $request->ajax()) {
+                return response()->json([
+                    'errors' => $validator->errors()
+                ], 422);
+            }
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        // Attempt login with remember support
+        $credentials = [
+            'name' => $request->name,
+            'password' => $request->password
+        ];
         
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            return "<h1>🚀 Login Successful!</h1><p>User: {$user->name}</p><p>Role: {$user->role}</p><p>Preparing to redirect...</p><a href='/redirect-by-role'>Click here to continue</a>";
+        $remember = $request->has('remember') && $request->remember;
+
+        if (Auth::attempt($credentials, $remember)) {
+            $request->session()->regenerate();
+            
+            // For AJAX requests, return JSON with redirect URL
+            if ($request->expectsJson() || $request->ajax()) {
+                return response()->json([
+                    'redirect' => route('redirect.by.role')
+                ]);
+            }
+            
+            return redirect()->intended(route('redirect.by.role'));
+        }
+
+        // Login failed
+        $errorMessage = 'اسم المستخدم أو كلمة المرور غير صحيحة.';
+        
+        if ($request->expectsJson() || $request->ajax()) {
+            return response()->json([
+                'message' => $errorMessage,
+                'errors' => ['name' => [$errorMessage]]
+            ], 422);
         }
         
-        return "<h1>❌ Login Failed via Auth::attempt()</h1><p>Credentials tried: " . htmlspecialchars($request->name) . "</p>";
+        return redirect()->back()
+            ->withErrors(['name' => $errorMessage])
+            ->withInput($request->only('name'));
     })->name('login.post');
 });
 
