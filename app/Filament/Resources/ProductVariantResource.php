@@ -21,7 +21,7 @@ class ProductVariantResource extends Resource
     protected static ?string $pluralLabel = 'الأنواع';
     protected static ?string $modelLabel = 'نوع';
     protected static ?int $navigationSort = 3;
-    protected static ?string $navigationGroup = 'إدارة المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     
     // Hide from main navigation - accessed via ProductResource RelationManager
     protected static bool $shouldRegisterNavigation = true;
