@@ -13,7 +13,7 @@ class ShipmentStatusPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('statuses.view_any');
+        return $user->role === 'admin' || $user->can('shipment_statuses.view_any');
     }
 
     /**

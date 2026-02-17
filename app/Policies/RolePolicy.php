@@ -9,7 +9,7 @@ class RolePolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->can('roles.view_any');
+        return $user->role === 'admin' || $user->can('roles.view_any');
     }
 
     public function view(User $user, Role $role): bool

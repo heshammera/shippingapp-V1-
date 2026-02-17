@@ -13,7 +13,7 @@ class DeliveryAgentPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('delivery_agents.view_any');
+        return $user->role === 'admin' || $user->can('delivery_agents.view_any');
     }
 
     /**
