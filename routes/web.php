@@ -6,6 +6,23 @@ use App\Http\Controllers\ShipmentReportController;
 use App\Http\Controllers\Reports\ExpensesReportController;
 use App\Http\Controllers\Reports\CollectionsReportController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+
+Route::get('/fix-admin', function () {
+    try {
+        $email = 'admin2@shippingapp.com';
+        $user = User::where('email', $email)->first();
+        if (!$user) return 'User not found';
+        
+        $role = Role::firstOrCreate(['name' => 'Super Admin', 'guard_name' => 'web']);
+        $user->assignRole($role);
+        
+        return "SUCCESS: Assigned Super Admin to {$user->email}";
+    } catch (\Throwable $e) {
+        return "ERROR: " . $e->getMessage();
+    }
+});
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
