@@ -37,12 +37,25 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogoHeight('3rem')
             ->favicon('/logo.png')
             ->darkMode(true)
-            // ->topNavigation() // Temporarily disabled to troubleshoot missing resources
+            ->topNavigation()
             ->maxContentWidth('full')
             ->sidebarCollapsibleOnDesktop()
             ->collapsibleNavigationGroups(true)
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
+            // Manually register resources instead of using discoverResources
+            ->resources([
+                \App\Filament\Resources\ShipmentResource::class,
+                \App\Filament\Resources\ProductResource::class,
+                \App\Filament\Resources\CollectionResource::class,
+                \App\Filament\Resources\ExpenseResource::class,
+                \App\Filament\Resources\ShippingCompanyResource::class,
+                \App\Filament\Resources\DeliveryAgentResource::class,
+                \App\Filament\Resources\UserResource::class,
+                \App\Filament\Resources\EmployeeResource::class,
+                \App\Filament\Resources\PayrollResource::class,
+                \App\Filament\Resources\InvoiceResource::class,
+                \App\Filament\Resources\InventoryLevelResource::class,
+            ])
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
