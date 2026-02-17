@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 class ShippingCompanyBalancesWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
-    protected static bool $shouldRegisterWidget = false;
 
     protected int|string|array $columnSpan = 'half';
     protected static ?string $heading = 'التحصيلات حسب شركة الشحن';

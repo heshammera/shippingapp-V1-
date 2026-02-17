@@ -11,7 +11,6 @@ use Filament\Widgets\Concerns\InteractsWithPageFilters;
 class RecentCollectionsWidget extends BaseWidget
 {
     use InteractsWithPageFilters;
-    protected static bool $shouldRegisterWidget = false;
 
     protected int|string|array $columnSpan = 'full';
     protected static ?string $heading = 'أحدث التحصيلات';
