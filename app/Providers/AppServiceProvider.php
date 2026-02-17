@@ -35,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         Livewire::component('app.filament.widgets.finance-stats-widget', \App\Filament\Widgets\FinanceStatsWidget::class);
         Livewire::component('app.filament.widgets.shipping-balances-widget', \App\Filament\Widgets\ShippingBalancesWidget::class);
         Livewire::component('app.filament.widgets.latest-collections-widget', \App\Filament\Widgets\LatestCollectionsWidget::class);
+        Livewire::component('app.filament.widgets.recent-expenses-widget', \App\Filament\Widgets\RecentExpensesWidget::class);
     }
 
 
