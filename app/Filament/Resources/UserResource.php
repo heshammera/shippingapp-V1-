@@ -75,6 +75,9 @@ class UserResource extends Resource
                         Forms\Components\CheckboxList::make('permissions')
                             ->label('صلاحيات إضافية (اختياري)')
                             ->relationship('permissions', 'name')
+                            ->saveRelationshipsUsing(function ($component, $state) {
+                                $component->getModelInstance()->permissions()->sync(array_unique($state));
+                            })
                             ->columns(3)
                             ->searchable()
                             ->bulkToggleable()
