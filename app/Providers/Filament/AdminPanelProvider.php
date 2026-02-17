@@ -41,6 +41,13 @@ class AdminPanelProvider extends PanelProvider
             ->maxContentWidth('full')
             ->sidebarCollapsibleOnDesktop()
             ->collapsibleNavigationGroups(true)
+            ->navigationGroups([
+                '📦 إدارة الشحنات',
+                '📦 المنتجات والمخزون',
+                '💰 الإدارة المالية',
+                '👥 المستخدمين والشركاء',
+                '⚙️ الإعدادات والربط',
+            ])
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
             // Manually register resources instead of using discoverResources
             ->resources([

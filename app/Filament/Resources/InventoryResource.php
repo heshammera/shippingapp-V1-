@@ -16,7 +16,7 @@ class InventoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-cube';
     protected static ?string $navigationLabel = 'المخزون الحالي';
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     protected static ?string $pluralLabel = 'المخزون';
     protected static ?string $modelLabel = 'عنصر مخزون';
     protected static ?int $navigationSort = 2;
