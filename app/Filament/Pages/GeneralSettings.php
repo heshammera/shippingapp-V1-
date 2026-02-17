@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Storage;
 class GeneralSettings extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationLabel = 'الإعدادات العامة';

@@ -24,7 +24,7 @@ class ImportShipments extends Page implements HasForms
     protected static ?string $slug = 'shipments/import-excel';
     protected static ?string $navigationGroup = '📦 العمليات';
     protected static ?int $navigationSort = 2;
-    protected static bool $shouldRegisterNavigation = false; // We link to it from the table, don't show in sidebar needed? User didn't specify. Let's hide to keep sidebar clean or show it? I'll hide it for now and link from Shipments.
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static string $view = 'filament.pages.import-shipments';
 

@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 class ShipmentStatusResource extends Resource
 {
     protected static ?string $model = ShipmentStatus::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
     protected static ?string $navigationLabel = 'حالات الشحنات';

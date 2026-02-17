@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 class ChartOfAccountResource extends Resource
 {
     protected static ?string $model = ChartOfAccount::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-list-bullet';
     protected static ?string $navigationLabel = 'دليل الحسابات (COA)';

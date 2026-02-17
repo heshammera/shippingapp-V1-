@@ -16,7 +16,7 @@ use Filament\Notifications\Notification;
 class StockTransferResource extends Resource
 {
     protected static ?string $model = StockTransfer::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-arrows-right-left';
     protected static ?string $navigationLabel = 'تحويلات مخزنية';

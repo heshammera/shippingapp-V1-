@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 
 class Backups extends Page
 {
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
     protected static ?string $navigationIcon = 'heroicon-o-arrow-path-rounded-square';
     protected static ?string $navigationLabel = 'النسخ الاحتياطي';
     protected static ?string $navigationGroup = '⚙️ النظام';

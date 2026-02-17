@@ -16,7 +16,7 @@ use App\Models\ChartOfAccount;
 class JournalEntryResource extends Resource
 {
     protected static ?string $model = JournalEntry::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
     protected static ?string $navigationLabel = 'القيود اليومية';

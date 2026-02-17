@@ -22,7 +22,7 @@ class InventoryResource extends Resource
     protected static ?int $navigationSort = 2;
     
     // Hidden - replaced by ProductVariant system
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {

@@ -16,7 +16,7 @@ use Filament\Pages\Page;
 class SystemSettings extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationLabel = 'إعدادات النظام';

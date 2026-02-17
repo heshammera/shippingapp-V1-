@@ -16,7 +16,7 @@ use Filament\Pages\Page;
 class NotificationSettings extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-bell';
     protected static ?string $navigationLabel = 'إعدادات التنبيهات';

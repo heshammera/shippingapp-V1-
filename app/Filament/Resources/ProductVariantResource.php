@@ -24,7 +24,7 @@ class ProductVariantResource extends Resource
     protected static ?string $navigationGroup = 'إدارة المخزون';
     
     // Hide from main navigation - accessed via ProductResource RelationManager
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     public static function form(Form $form): Form
     {

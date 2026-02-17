@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 class StockMovementResource extends Resource
 {
     protected static ?string $model = StockMovement::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
     protected static ?string $navigationLabel = 'حركات المخزون';

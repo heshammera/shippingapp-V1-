@@ -17,7 +17,7 @@ class WarehouseResource extends Resource
 {
     protected static ?string $model = Warehouse::class;
     protected static ?string $navigationIcon = 'heroicon-o-building-storefront'; // Keep icon for Hub
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     // hidden from sidebar
     protected static ?string $navigationLabel = 'المستودعات';

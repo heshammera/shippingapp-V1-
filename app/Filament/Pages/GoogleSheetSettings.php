@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
 class GoogleSheetSettings extends Page implements HasForms
 {
     use InteractsWithForms;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-table-cells';
     protected static ?string $navigationLabel = 'اعدادات Google Sheets';
