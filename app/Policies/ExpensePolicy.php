@@ -13,7 +13,7 @@ class ExpensePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('expenses.view_any');
+        return $user->role === 'admin' || $user->can('expenses.view_any');
     }
 
     /**

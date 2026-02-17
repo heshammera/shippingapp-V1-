@@ -13,7 +13,7 @@ class ProductPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('products.view_any');
+        return $user->role === 'admin' || $user->can('products.view_any');
     }
 
     /**

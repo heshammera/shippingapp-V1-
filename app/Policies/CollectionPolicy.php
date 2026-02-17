@@ -13,7 +13,7 @@ class CollectionPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('collections.view_any');
+        return $user->role === 'admin' || $user->can('collections.view_any');
     }
 
     /**
