@@ -33,9 +33,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->font('Tajawal')
             ->brandName('Orderly')
-            ->brandLogo(asset('logo.png')) // Use the logo we copied
+            ->brandLogo('/logo.png') // Use the logo we copied
             ->brandLogoHeight('3rem')
-            ->favicon(asset('logo.png'))
+            ->favicon('/logo.png')
             ->darkMode(true)
             ->topNavigation()
             ->maxContentWidth('full')

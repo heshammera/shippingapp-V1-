@@ -26,7 +26,11 @@
             "dest": "/robots.txt"
         },
         {
-            "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
+            "src": "/livewire/livewire.js",
+            "dest": "/api/index.php"
+        },
+        {
+            "src": "/(.*\\.(css|js|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
             "dest": "/$1"
         },
         {
