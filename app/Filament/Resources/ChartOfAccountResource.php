@@ -19,8 +19,8 @@ class ChartOfAccountResource extends Resource
     protected static ?string $navigationLabel = 'دليل الحسابات (COA)';
     protected static ?string $pluralLabel = 'الحسابات';
     protected static ?string $modelLabel = 'حساب';
-    protected static ?string $navigationGroup = '💰 المالية';
-    protected static ?int $navigationSort = 7;
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
+    protected static ?int $navigationSort = 8;
 
     public static function form(Form $form): Form
     {

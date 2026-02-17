@@ -20,7 +20,7 @@ class ProductResource extends Resource
     protected static ?string $pluralLabel = 'المنتجات';
     protected static ?string $modelLabel = 'منتج';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
 
     public static function form(Form $form): Form
     {

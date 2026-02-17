@@ -21,8 +21,8 @@ class EmployeeResource extends Resource
     protected static ?string $navigationLabel = 'الموظفين';
     protected static ?string $pluralLabel = 'الموظفين';
     protected static ?string $modelLabel = 'موظف';
-    protected static ?string $navigationGroup = '👥 الموارد البشرية';
-    protected static ?int $navigationSort = 1;
+    protected static ?string $navigationGroup = '👥 المستخدمين والشركاء';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

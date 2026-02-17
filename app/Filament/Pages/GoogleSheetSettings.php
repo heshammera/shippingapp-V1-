@@ -19,10 +19,10 @@ class GoogleSheetSettings extends Page implements HasForms
 
     protected static ?string $navigationIcon = 'heroicon-o-table-cells';
     protected static ?string $navigationLabel = 'اعدادات Google Sheets';
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 5;
     protected static ?string $title = 'إعدادات ربط Google Sheet';
     protected static ?string $slug = 'settings/google-sheet';
-    protected static ?string $navigationGroup = '⚡ أدوات ذكية';
+    protected static ?string $navigationGroup = '⚙️ الإعدادات والربط';
     
     protected static string $view = 'filament.pages.google-sheet-settings';
 

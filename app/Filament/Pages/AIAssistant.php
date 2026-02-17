@@ -17,7 +17,7 @@ class AIAssistant extends Page implements HasForms
     protected static ?string $navigationLabel = 'المساعد الذكي';
     protected static ?string $navigationGroup = '⚡ أدوات ذكية';
     protected static ?int $navigationSort = 1;
-    protected static bool $shouldRegisterNavigation = true;
+    protected static bool $shouldRegisterNavigation = false;
     
     public string $question = '';
     public string $answer = '';

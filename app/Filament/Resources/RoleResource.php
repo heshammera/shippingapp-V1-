@@ -20,8 +20,8 @@ class RoleResource extends Resource
     protected static ?string $navigationLabel = 'الأدوار والصلاحيات';
     protected static ?string $pluralLabel = 'الأدوار';
     protected static ?string $modelLabel = 'دور';
-    protected static ?string $navigationGroup = '⚙️ النظام';
-    protected static ?int $navigationSort = 2;
+    protected static ?string $navigationGroup = '👥 المستخدمين والشركاء';
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {

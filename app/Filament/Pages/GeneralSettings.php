@@ -24,8 +24,8 @@ class GeneralSettings extends Page implements HasForms
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?string $navigationLabel = 'الإعدادات العامة';
-    protected static ?string $navigationGroup = '⚙️ النظام';
-    protected static ?int $navigationSort = 6;
+    protected static ?string $navigationGroup = '⚙️ الإعدادات والربط';
+    protected static ?int $navigationSort = 1;
     protected static string $view = 'filament.pages.settings-page';
 
     public ?array $data = [];

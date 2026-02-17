@@ -20,7 +20,7 @@ class StockTransferResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-arrows-right-left';
     protected static ?string $navigationLabel = 'تحويلات مخزنية';
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     protected static ?string $pluralLabel = 'تحويلات المخزون';
     protected static ?string $modelLabel = 'تحويل مخزني';
     protected static ?int $navigationSort = 4;

@@ -18,7 +18,7 @@ class CollectionResource extends Resource
     protected static ?string $navigationLabel = 'التحصيلات';
     protected static ?string $pluralLabel = 'التحصيلات';
     protected static ?string $modelLabel = 'تحصيل';
-    protected static ?string $navigationGroup = '💰 المالية';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
     protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form

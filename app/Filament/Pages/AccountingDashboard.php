@@ -14,7 +14,7 @@ class AccountingDashboard extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-line';
     protected static ?string $navigationLabel = 'لوحة المالية';
-    protected static ?string $navigationGroup = '💰 المالية';
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
     protected static ?string $slug = 'accounting-dashboard';
     protected static ?string $title = 'الملخص المالي';
     protected static ?int $navigationSort = 1;

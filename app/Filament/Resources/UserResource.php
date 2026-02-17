@@ -20,7 +20,7 @@ class UserResource extends Resource
     protected static ?string $navigationLabel = 'المستخدمين';
     protected static ?string $pluralLabel = 'المستخدمين';
     protected static ?string $modelLabel = 'مستخدم';
-    protected static ?string $navigationGroup = '⚙️ النظام';
+    protected static ?string $navigationGroup = '👥 المستخدمين والشركاء';
     protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form

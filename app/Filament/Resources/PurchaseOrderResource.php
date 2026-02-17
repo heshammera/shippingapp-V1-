@@ -19,7 +19,7 @@ class PurchaseOrderResource extends Resource
     protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-cart';
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     protected static ?string $navigationLabel = 'أوامر الشراء';
     protected static ?string $pluralLabel = 'أوامر الشراء';
     protected static ?string $modelLabel = 'أمر شراء';

@@ -19,11 +19,11 @@ class SupplierResource extends Resource
     protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     protected static ?string $navigationLabel = 'الموردين';
     protected static ?string $pluralLabel = 'الموردين';
     protected static ?string $modelLabel = 'مورد';
-    protected static ?int $navigationSort = 8;
+    protected static ?int $navigationSort = 6;
 
     public static function form(Form $form): Form
     {

@@ -20,8 +20,8 @@ class ExpenseResource extends Resource
     protected static ?string $navigationLabel = 'المصروفات';
     protected static ?string $modelLabel = 'مصروف';
     protected static ?string $pluralModelLabel = 'المصروفات';
-    protected static ?string $navigationGroup = '💰 المالية';
-    protected static ?int $navigationSort = 3;
+    protected static ?string $navigationGroup = '💰 الإدارة المالية';
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {

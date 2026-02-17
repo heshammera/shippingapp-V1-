@@ -21,7 +21,7 @@ class WarehouseResource extends Resource
 
     // hidden from sidebar
     protected static ?string $navigationLabel = 'المستودعات';
-    protected static ?string $navigationGroup = '📦 المخزون';
+    protected static ?string $navigationGroup = '📦 المنتجات والمخزون';
     protected static ?string $pluralLabel = 'المستودعات';
     protected static ?string $modelLabel = 'مستودع';
     protected static ?int $navigationSort = 3;

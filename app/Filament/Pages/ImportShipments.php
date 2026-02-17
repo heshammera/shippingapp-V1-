@@ -22,7 +22,7 @@ class ImportShipments extends Page implements HasForms
     protected static ?string $navigationLabel = 'استيراد شحنات (Excel)';
     protected static ?string $title = 'استيراد الشحنات من Excel';
     protected static ?string $slug = 'shipments/import-excel';
-    protected static ?string $navigationGroup = '📦 العمليات';
+    protected static ?string $navigationGroup = '📦 إدارة الشحنات';
     protected static ?int $navigationSort = 3;
     protected static bool $shouldRegisterNavigation = true;
 
