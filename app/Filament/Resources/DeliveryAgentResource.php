@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 class DeliveryAgentResource extends Resource
 {
     protected static ?string $model = DeliveryAgent::class;
-    protected static bool $shouldRegisterNavigation = false;
+    protected static bool $shouldRegisterNavigation = true;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $navigationLabel = 'المناديب';
