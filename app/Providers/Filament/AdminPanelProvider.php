@@ -73,13 +73,13 @@ class AdminPanelProvider extends PanelProvider
             ->pages([
                 Pages\Dashboard::class,
                 \App\Filament\Pages\AccountingDashboard::class,
-                \App\Filament\Pages\ImportShipments::class,
-                \App\Filament\Pages\GoogleSheetSettings::class,
-                \App\Filament\Pages\NotificationSettings::class,
-                \App\Filament\Pages\GeneralSettings::class,
-                \App\Filament\Pages\SystemSettings::class,
-                \App\Filament\Pages\AIAssistant::class,
-                \App\Filament\Pages\Backups::class,
+                // \App\Filament\Pages\ImportShipments::class,
+                // \App\Filament\Pages\GoogleSheetSettings::class,
+                // \App\Filament\Pages\NotificationSettings::class,
+                // \App\Filament\Pages\GeneralSettings::class,
+                // \App\Filament\Pages\SystemSettings::class,
+                // \App\Filament\Pages\AIAssistant::class,
+                // \App\Filament\Pages\Backups::class,
             ])
             // ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
