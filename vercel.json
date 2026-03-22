@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "npm run build",
+    "buildCommand": "composer install --optimize-autoloader --no-dev && composer run-script pre-autoload-dump && npm run build",
     "outputDirectory": "public",
     "functions": {
         "api/index.php": {
