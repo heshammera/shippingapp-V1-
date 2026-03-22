@@ -23,6 +23,7 @@
         "picqer/php-barcode-generator": "^3.2",
         "simplesoftwareio/simple-qrcode": "*",
         "spatie/laravel-activitylog": "^4.10",
+        "spatie/laravel-backup": "^9.3",
         "spatie/laravel-permission": "*"
     },
     "require-dev": {
@@ -78,7 +79,9 @@
             "Drive"
         ],
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "spatie/laravel-backup"
+            ]
         }
     },
     "config": {
