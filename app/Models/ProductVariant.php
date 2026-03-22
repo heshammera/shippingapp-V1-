@@ -101,7 +101,7 @@ class ProductVariant extends Model
      */
     public function scopeLowStock($query)
     {
-        return $query->where('is_unlimited', false)
+        return $query->whereRaw('is_unlimited = false')
             ->whereRaw('(stock_quantity - reserved_quantity) <= low_stock_threshold');
     }
 
@@ -110,7 +110,7 @@ class ProductVariant extends Model
      */
     public function scopeOutOfStock($query)
     {
-        return $query->where('is_unlimited', false)
+        return $query->whereRaw('is_unlimited = false')
             ->whereRaw('(stock_quantity - reserved_quantity) <= 0');
     }
 
@@ -120,7 +120,7 @@ class ProductVariant extends Model
     public function scopeInStock($query)
     {
         return $query->where(function($q) {
-            $q->where('is_unlimited', true)
+            $q->whereRaw('is_unlimited = true')
               ->orWhereRaw('(stock_quantity - reserved_quantity) > 0');
         });
     }

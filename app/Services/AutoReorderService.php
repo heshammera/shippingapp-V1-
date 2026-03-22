@@ -20,7 +20,7 @@ class AutoReorderService
         // 1. Find variants below threshold
         $lowStockVariants = ProductVariant::query()
             ->with(['product', 'product.supplier'])
-            ->where('is_unlimited', false)
+            ->whereRaw('is_unlimited = false')
             ->whereRaw('(stock_quantity - reserved_quantity) <= low_stock_threshold')
             ->get();
 

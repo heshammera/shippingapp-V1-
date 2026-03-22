@@ -58,11 +58,11 @@ use App\Http\Controllers\{
 
 // Route::redirect('/', '/admin');
 
-
-
-
-
-//Route::get('expenses', [Reports\ExpensesReportController::class, 'index'])
+Route::get('/clear-cache', function() {
+    \Illuminate\Support\Facades\Artisan::call('optimize:clear');
+    \Illuminate\Support\Facades\Artisan::call('filament:clear-cached-components');
+    return 'Cache cleared successfully';
+});//Route::get('expenses', [Reports\ExpensesReportController::class, 'index'])
 //     ->name('expenses.index');
 //Route::get('/expenses/{expense}', [ExpenseController::class, 'show'])->name('expenses.show');
 //Route::get('/expenses/{expense}/edit', [ExpenseController::class, 'edit'])->name('expenses.edit');

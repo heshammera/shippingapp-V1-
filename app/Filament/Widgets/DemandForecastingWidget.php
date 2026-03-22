@@ -20,7 +20,7 @@ class DemandForecastingWidget extends BaseWidget
         return $table
             ->query(
                 ProductVariant::query()
-                    ->where('is_unlimited', false)
+                    ->whereRaw('is_unlimited = false')
                     ->addSelect(['sold_30_days' => function ($query) {
                         $query->selectRaw('coalesce(sum(shipment_product.quantity), 0)')
                             ->from('shipment_product')
