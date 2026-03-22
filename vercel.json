@@ -5,9 +5,7 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": [
-                "vendor/google/apiclient-services/src/Google/Service/!(Drive*|Sheets*)**"
-            ],
+            "excludeFiles": "vendor/google/apiclient-services/src/Google/Service/!(Drive*|Sheets*)**",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
