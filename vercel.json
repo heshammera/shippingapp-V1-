@@ -1,10 +1,13 @@
 {
     "version": 2,
-    "buildCommand": "composer install --optimize-autoloader --no-dev && composer run-script pre-autoload-dump && npm run build",
+    "buildCommand": "npm run build",
     "outputDirectory": "public",
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
+            "excludeFiles": [
+                "vendor/google/apiclient-services/src/Google/Service/!(Drive*|Sheets*)**"
+            ],
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
