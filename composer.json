@@ -16,28 +16,26 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
+        "laravel/tinker": "^2.8",
         "maatwebsite/excel": "^3.1",
         "milon/barcode": "^12.0",
+        "mpdf/mpdf": "^8.2",
         "picqer/php-barcode-generator": "^3.2",
         "simplesoftwareio/simple-qrcode": "*",
         "spatie/laravel-activitylog": "^4.10",
+        "spatie/laravel-backup": "^9.3",
         "spatie/laravel-permission": "*"
-    },
-    "replace": {
-        "mpdf/mpdf": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "kitloong/laravel-migrations-generator": "^7.0",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
-        "laravel/tinker": "^2.11",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "orangehill/iseed": "^3.1",
         "phpunit/phpunit": "^10.1",
         "reliese/laravel": "^1.4",
-        "spatie/laravel-backup": "^9.4",
         "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
@@ -59,9 +57,8 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan livewire:discover --ansi",
-            "Google\\Task\\Composer::cleanup",
-            "@php scripts/cleanup_google_services.php"
+            "@php artisan optimize:clear",
+            "@php artisan view:clear"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -78,12 +75,7 @@
             "dont-discover": [
                 "spatie/laravel-backup"
             ]
-        },
-        "google/apiclient-services": [
-            "Drive",
-            "Sheets",
-            "Oauth2"
-        ]
+        }
     },
     "config": {
         "optimize-autoloader": true,
