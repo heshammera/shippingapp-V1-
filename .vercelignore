@@ -89,3 +89,27 @@ an make_migration add_missing_fields_to_shipments_table --table=shipments
 AutoReorderService.php
 DemandForecastingWidget.php
 ProductVariant.php
+
+# Exclude large/useless vendor files
+vendor/composer/*.zip
+vendor/composer/tmp-*
+vendor/**/tests/**
+vendor/**/Tests/**
+vendor/**/docs/**
+vendor/**/readme.md
+vendor/**/README.md
+vendor/**/CHANGELOG.md
+vendor/**/composer.lock
+
+# Aggressive mpdf font exclusion
+vendor/mpdf/mpdf/ttfonts/[!D]*
+vendor/mpdf/mpdf/ttfonts/D[!e]*
+vendor/mpdf/mpdf/ttfonts/De[!j]*
+vendor/mpdf/mpdf/ttfonts/Dej[!a]*
+vendor/mpdf/mpdf/ttfonts/Deja[!V]*
+vendor/mpdf/mpdf/ttfonts/DejaVu[!S]*
+vendor/mpdf/mpdf/ttfonts/DejaVuS[!a]*
+vendor/mpdf/mpdf/ttfonts/DejaVuSa[!n]*
+vendor/mpdf/mpdf/ttfonts/DejaVuSan[!s]*
+vendor/mpdf/mpdf/ttfonts/DejaVuSans-[!R]*
+vendor/mpdf/mpdf/ttfonts/D*.txt
