@@ -11,7 +11,7 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": "{tests/**,vendor/**/{tests,Tests}/**,storage/{logs,framework/cache}/**}",
+            "excludeFiles": "{tests/**,vendor/**/{tests,Tests}/**,storage/{logs,framework/cache}/**,vendor/google/apiclient-services/src/Google/Service/[A-CE-RT-Z]*/**,vendor/mpdf/mpdf/ttfonts/{Sun-Ext*,unbatang*}*}",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
