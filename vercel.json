@@ -2,10 +2,16 @@
     "version": 2,
     "buildCommand": "npm run build",
     "outputDirectory": "public",
+    "build": {
+        "env": {
+            "APP_ENV": "production",
+            "COMPOSER_NO_DEV": "1"
+        }
+    },
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": "{tests/**,vendor/**/{tests,Tests}/**,vendor/{mockery,fakerphp,phpunit,spatie/laravel-ignition}/**,storage/{logs,framework/cache}/**,vendor/google/apiclient-services/src/Google/Service/[A-CE-RT-Z]*/**}",
+            "excludeFiles": "{tests/**,vendor/**/{tests,Tests}/**,storage/{logs,framework/cache}/**}",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
