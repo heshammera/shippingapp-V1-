@@ -12,7 +12,7 @@
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
             "maxDuration": 30,
-            "excludeFiles": "{tests/**,vendor/**/{[tT]ests,doc*}/**,storage/{logs,f**}/**,vendor/composer/{*.zip,tmp-*},vendor/mpdf/**/ttfonts/{[!D]*,D[!e]*,De[!j]*,DejaVu[!S]*,DejaVuSans[!.]*},vendor/dompdf/**/fonts/[!D]*,vendor/google/apiclient-services/src/[!DS]*/**}",
+            "excludeFiles": "{tests/**,vendor/**/{[tT]ests,doc*}/**,storage/**,vendor/composer/{*.zip,tmp-*},vendor/mpdf/**/ttfonts/{[!D]*,D[!e]*,De[!j]*,DejaVu[!S]*,DejaVuSans[!.]*},vendor/dompdf/**/fonts/[!D]*,vendor/google/apiclient-services/src/[!DS]*/**}",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },

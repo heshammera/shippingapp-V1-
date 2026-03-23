@@ -4,10 +4,7 @@
 .gitattributes
 .github
 tests
-storage/logs/**
-storage/framework/cache/**
-storage/framework/sessions/**
-storage/framework/testing/**
+storage/**
 node_modules/
 .phpunit.result.cache
 phpunit.xml
@@ -100,6 +97,8 @@ vendor/**/readme.md
 vendor/**/README.md
 vendor/**/CHANGELOG.md
 vendor/**/composer.lock
+vendor/**/.git*
+vendor/**/phpunit.*
 
 # Aggressive mpdf font exclusion
 vendor/mpdf/mpdf/ttfonts/[!D]*
