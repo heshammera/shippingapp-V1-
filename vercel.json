@@ -5,7 +5,7 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": "vendor/google/apiclient-services/src/Google/Service/{[A-C]*/**,[E-R]*/**,[T-Z]*/**}",
+            "excludeFiles": "{tests/**,vendor/**/tests/**,vendor/**/Tests/**,vendor/mockery/**,vendor/fakerphp/**,vendor/phpunit/**,vendor/spatie/laravel-ignition/**,vendor/nunomaduro/collision/**,storage/logs/**,storage/framework/cache/**,vendor/google/apiclient-services/src/Google/Service/{[A-C]*/**,[E-R]*/**,[T-Z]*/**}}",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
