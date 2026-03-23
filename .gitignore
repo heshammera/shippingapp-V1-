@@ -17,3 +17,56 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Temp/debug files
+*.log
+/composer.phar
+/docs/
+/migration_backup/
+/cgi-bin/
+/scripts/
+/%TEMP%/
+
+# Root-level debug/temp PHP scripts
+/backfill_barcodes.php
+/cleanup_duplicates.php
+/create_admin_user.php
+/create_roles.php
+/debug_shipment_date.php
+/find_duplicates.php
+/find_line.php
+/find_nulls.php
+/fix_duplicates.php
+/fix_seeder.php
+/fix_seeder_statuses.php
+/force_sql_update.php
+/list_tables.php
+/move_duplicates.php
+/move_remaining_duplicates.php
+/read_log.php
+/read_log_tail.php
+/redundant_migrations_cleanup.php
+/redundant_migrations_cleanup_2.php
+/search_text.php
+/swap_roles_migration.php
+/test_barcode.php
+/test_db.php
+
+# Root-level temp text/log files
+*.txt
+/error_log
+/alternate_phone
+/deliveryAgent
+/name
+
+# Stray files with bad names
+/DeliveryAgent__find*
+/ShipmentStatus__create*
+/hipments*
+/ting*
+/an make_migration*
+
+# Copied PHP files at root
+/AutoReorderService.php
+/DemandForecastingWidget.php
+/ProductVariant.php

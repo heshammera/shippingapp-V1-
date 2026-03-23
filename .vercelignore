@@ -18,5 +18,74 @@ _ide_helper_models.php
 npm-debug.log
 yarn-error.log
 auth.json
-# Exclude text logs
+
+# Exclude logs
 *.log
+
+# Exclude temporary/debug PHP scripts at root
+backfill_barcodes.php
+cleanup_duplicates.php
+create_admin_user.php
+create_roles.php
+debug_shipment_date.php
+find_duplicates.php
+find_line.php
+find_nulls.php
+fix_duplicates.php
+fix_seeder.php
+fix_seeder_statuses.php
+force_sql_update.php
+list_tables.php
+move_duplicates.php
+move_remaining_duplicates.php
+read_log.php
+read_log_tail.php
+redundant_migrations_cleanup.php
+redundant_migrations_cleanup_2.php
+search_text.php
+swap_roles_migration.php
+test_barcode.php
+test_db.php
+web.php
+
+# Exclude temp/debug text files at root
+*.txt
+composer_error.txt
+dry_run_error.txt
+duplicates.txt
+duplicates_utf8.txt
+mpdf_context.txt
+error_log
+error_log.txt
+
+# Exclude misc root files
+composer.phar
+Dockerfile
+.dockerignore
+entrypoint.sh
+backup_project.sh
+render.yaml
+
+# Exclude temp data files at root
+alternate_phone
+deliveryAgent
+name
+
+# Exclude directories not needed for deployment
+docs/
+migration_backup/
+cgi-bin/
+scripts/
+.well-known/
+
+# Exclude stray files with bad names at root
+DeliveryAgent__find(9);
+ShipmentStatus__create([
+hipments as $shipment) {
+ting('shipments');
+an make_migration add_missing_fields_to_shipments_table --table=shipments
+
+# Exclude copied PHP files at root (duplicates of app files)
+AutoReorderService.php
+DemandForecastingWidget.php
+ProductVariant.php

@@ -11,7 +11,8 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.2",
-            "excludeFiles": "{tests/**,vendor/**/{tests,Tests}/**,storage/{logs,framework/cache}/**,vendor/google/apiclient-services/src/Google/Service/[A-CE-RT-Z]*/**,vendor/mpdf/mpdf/ttfonts/{Sun-Ext*,unbatang*}*}",
+            "maxDuration": 30,
+            "excludeFiles": "{tests/**,vendor/**/{tests,Tests,test,Test}/**,vendor/**/{docs,doc,Docs,Doc}/**,vendor/**/{.git,.github}/**,vendor/**/{CHANGELOG,CHANGELOG.md,CHANGES.md,UPGRADING.md,UPGRADE.md,README.md,readme.md,LICENSE,LICENSE.md,license.md,CONTRIBUTING.md,.travis.yml,.scrutinizer.yml,phpunit.xml,phpunit.xml.dist,phpstan.neon,phpstan.neon.dist,.php_cs,.php_cs.dist,.editorconfig,.styleci.yml}*,storage/{logs,framework/cache,framework/sessions,framework/testing}/**,vendor/google/apiclient-services/src/[!DS]*/**,vendor/google/apiclient-services/src/D[!r]*/**,vendor/google/apiclient-services/src/S[!h]*/**,vendor/mpdf/mpdf/ttfonts/[!D]*,vendor/mpdf/mpdf/ttfonts/D[!e]*,vendor/mpdf/mpdf/data/codepages/**,vendor/dompdf/dompdf/lib/fonts/[!D]*,vendor/dompdf/dompdf/lib/fonts/D[!e]*,vendor/phpoffice/**/samples/**,vendor/phpseclib/**/{Functional,Unit}/**,vendor/nesbot/carbon/src/Carbon/Lang/[!e]*}",
             "includeFiles": "{vendor,bootstrap,app,config,database,resources,routes,storage}/**"
         }
     },
